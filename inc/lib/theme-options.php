@@ -130,7 +130,7 @@ function custom_theme_options() {
 				array(
 					'id'			=> 'property_price',
 					'label'			=> __( 'Price', 'text-domain' ),
-					'desc'			=> __( '/month', 'text-domain' ),
+					'desc'			=> __( '$/month', 'text-domain' ),
 					'type'			=> 'text',
 				),
 				array(

@@ -8,30 +8,43 @@ if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'advanced' && !is_admin
 	$_bedrooms 	= ($_GET['bedrooms'] != '') ? $_GET['bedrooms'] : '';
 	$_bathrooms = ($_GET['bathrooms'] != '') ? $_GET['bathrooms'] : '';
 	$_location 	= ($_GET['location'] != '') ? $_GET['location'] : '';
+	$_s 		= ($_GET['s'] != '') ? $_GET['s'] : '';
 
 	$meta_query = array(
+		// array(
+		// 	'relation' => 'OR',
+		// 	array(
+		// 		'key'		=> 's',
+		// 		'value'		=> $_s,
+		// 		'compare'	=> 'LIKE',
+		// 	),
+		// ),
+		array(			
+			'key'		=> 'property_bedroom',
+			'value'		=> $_bedrooms,
+			'type'		=> 'numeric',
+			'compare'	=> 'LIKE',
+		),
+		array(
+			'key'		=> 'property_bathroom',
+			'value'		=> $_bathrooms,
+			'type'		=> 'numeric',
+			'compare'	=> 'LIKE',
+		),
+		array(
+			'key'		=> 'property_location',
+			'value'		=> $_location,
+			'compare'	=> 'LIKE',
+		),
 		array(
 			'key'		=> 'property_price',
 			'value'		=> array($_minprice, $_maxprice),
 			'type'		=> 'numeric',
 			'compare'	=> 'BETWEEN',
 		),
-		array(
-			'key'		=> 'property_bedroom',
-			'value'		=> $_bedrooms,
-			'compare'	=> 'LIKE',
-		),
-		array(
-			'key'		=> 'property_bathroom',
-			'value'		=> $_bathrooms,
-			'compare'	=> 'LIKE',
-		),		
-		array(
-			'key'		=> 'property_location',
-			'value'		=> $_location,
-			'compare'	=> 'LIKE',
-		),
+		
 	);
 
 	$query->set('meta_query', $meta_query);
+
 }

@@ -81,51 +81,58 @@
 		<div class="search-property">
 			<div class="g-row">
 				<div class="one-quarter">
-					<img src="<?php bloginfo('template_url');?>/assets/images/search-house.png ?>">
+					<img class="icon-search-advanced" src="<?php bloginfo('template_url');?>/assets/images/search-house.png ?>">
 				</div>
 				<div class="three-quarters">
 					<h3><?php pll_e('Property Search') ?></h3>
 
 					<form method="get" id="advanced-searchform" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-
 						<input type="hidden" name="search" value="advanced">
 
-						<select name="bedrooms" id="bedrooms">
-							<option value=""><?php pll_e('Bedrooms') ?></option>
-							<option value="1" <?php echo ($_GET['bedrooms'] == '1') ? 'selected' : '' ?>><?php _e( '1', 'textdomain' ); ?></option>
-							<option value="2" <?php echo ($_GET['bedrooms'] == '2') ? 'selected' : '' ?>><?php _e( '2', 'textdomain' ); ?></option>
-							<option value="3" <?php echo ($_GET['bedrooms'] == '3') ? 'selected' : '' ?>><?php _e( '3', 'textdomain' ); ?></option>
-							<option value="4" <?php echo ($_GET['bedrooms'] == '4') ? 'selected' : '' ?>><?php _e( '4', 'textdomain' ); ?></option>
-							<option value="5" <?php echo ($_GET['bedrooms'] == '5') ? 'selected' : '' ?>><?php _e( '5', 'textdomain' ); ?></option>
-						</select>
+						<div class="one-third">
+							<select name="bedrooms" id="bedrooms" class="slb">
+								<option value=""><?php pll_e('Bedrooms') ?></option>
+								<option value="1" <?php echo ($_GET['bedrooms'] == '1') ? 'selected' : '' ?>><?php _e( '1', 'textdomain' ); ?></option>
+								<option value="2" <?php echo ($_GET['bedrooms'] == '2') ? 'selected' : '' ?>><?php _e( '2', 'textdomain' ); ?></option>
+								<option value="3" <?php echo ($_GET['bedrooms'] == '3') ? 'selected' : '' ?>><?php _e( '3', 'textdomain' ); ?></option>
+								<option value="4" <?php echo ($_GET['bedrooms'] == '4') ? 'selected' : '' ?>><?php _e( '4', 'textdomain' ); ?></option>
+								<option value="5" <?php echo ($_GET['bedrooms'] == '5') ? 'selected' : '' ?>><?php _e( '5', 'textdomain' ); ?></option>
+							</select>
+						</div>
+						<div class="one-third">
+							<select name="bathrooms" id="bathrooms" class="slb">
+								<option value=""><?php pll_e('Bathrooms') ?></option>
+								<option value="1" <?php echo ($_GET['bathrooms'] == '1') ? 'selected' : '' ?>><?php _e( '1', 'textdomain' ); ?></option>
+								<option value="2" <?php echo ($_GET['bathrooms'] == '2') ? 'selected' : '' ?>><?php _e( '2', 'textdomain' ); ?></option>
+								<option value="3" <?php echo ($_GET['bathrooms'] == '3') ? 'selected' : '' ?>><?php _e( '3', 'textdomain' ); ?></option>
+								<option value="4" <?php echo ($_GET['bathrooms'] == '4') ? 'selected' : '' ?>><?php _e( '4', 'textdomain' ); ?></option>
+								<option value="5" <?php echo ($_GET['bathrooms'] == '5') ? 'selected' : '' ?>><?php _e( '5', 'textdomain' ); ?></option>
+							</select>
+						</div>
+						<div class="one-third">
+							<select name="location" id="location" class="slb">
+								<option value=""><?php pll_e('Location') ?></option>
+								<option value="Tay Ho"><?php _e( 'Tay Ho', 'textdomain' ); ?></option>
+								<option value="Thanh Xuan"><?php _e( 'Thanh Xuan', 'textdomain' ); ?></option>
+								<option value="Ba Dinh"><?php _e( 'Ba Dinh', 'textdomain' ); ?></option>
+								<option value="Cau Giay"><?php _e( 'Cau Giay', 'textdomain' ); ?></option>
+							</select>
+						</div>
+						<div class="clear"></div>
 
-						<select name="bathrooms" id="bathrooms">
-							<option value=""><?php pll_e('Bathrooms') ?></option>
-							<option value="1" <?php echo ($_GET['bedrooms'] == '1') ? 'selected' : '' ?>><?php _e( '1', 'textdomain' ); ?></option>
-							<option value="2" <?php echo ($_GET['bedrooms'] == '2') ? 'selected' : '' ?>><?php _e( '2', 'textdomain' ); ?></option>
-							<option value="3" <?php echo ($_GET['bedrooms'] == '3') ? 'selected' : '' ?>><?php _e( '3', 'textdomain' ); ?></option>
-							<option value="4" <?php echo ($_GET['bedrooms'] == '4') ? 'selected' : '' ?>><?php _e( '4', 'textdomain' ); ?></option>
-							<option value="5" <?php echo ($_GET['bedrooms'] == '5') ? 'selected' : '' ?>><?php _e( '5', 'textdomain' ); ?></option>
-						</select>
-
-						<select name="location" id="location">
-							<option value=""><?php pll_e('Location') ?></option>
-							<option value="Tay Ho"><?php _e( 'Tay Ho', 'textdomain' ); ?></option>
-							<option value="Thanh Xuan"><?php _e( 'Thanh Xuan', 'textdomain' ); ?></option>
-							<option value="Ba Dinh"><?php _e( 'Ba Dinh', 'textdomain' ); ?></option>
-							<option value="Cau Giay"><?php _e( 'Cau Giay', 'textdomain' ); ?></option>
-						</select>
-
-						<label for="min_price"><?php pll_e('Min Price') ?></label><br>
-						<input type="text" value="<?php echo $_GET['min_price'] ?>" name="min_price" id="min_price" />
-						<label for="max_price"><?php pll_e('Max Price') ?></label><br>
-						<input type="text" value="<?php echo $_GET['max_price'] ?>" name="max_price" id="max_price" />
-
-						<label for="s" class=""><?php _e( 'Name: ', 'textdomain' ); ?></label><br>
-						<input type="text" value="" placeholder="<?php _e( 'Type the Price', 'textdomain' ); ?>" name="s" id="name" />
-
-						<input type="submit" id="searchsubmit" value="Search" />
-
+						<div class="one-quarter">
+							<input type="text" value="<?php echo $_GET['min_price'] ?>" name="min_price" id="min_price" placeholder="<?php pll_e('Min Price') ?>" />
+						</div>
+						<div class="one-quarter">
+							<input type="text" value="<?php echo $_GET['max_price'] ?>" name="max_price" id="max_price" placeholder="<?php pll_e('Max Price') ?>" />
+						</div>
+						<div class="one-quarter">
+							<input type="text" value="<?php echo $_GET['s'] ?>" name="s" id="name" placeholder="<?php pll_e('Type the Price'); ?>" />
+						</div>
+						<div class="one-quarter">
+							<input type="submit" id="searchsubmit" value="<?php pll_e('Search') ?>" class="btnSubmit" />
+						</div>
+						<div class="clear"></div>
 					</form>
 				</div>
 			</div>			

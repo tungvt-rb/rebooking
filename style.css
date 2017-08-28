@@ -131,6 +131,48 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 }
 .tooltip:hover .tooltiptext {visibility:visible;}
 
+/* SEARCH ADVANCED */
+.search-property {background:#dce4d5;}
+.search-property h3 {font-size:22px;text-align:center;line-height:30px;font-weight:500;color:#de5744;margin-bottom:10px;padding:10px 0 5px;}
+.search-property .icon-search-advanced {max-width:38%;margin-top:15px;}
+
+/* FORM ELEMENTS STYLE */
+.btnSubmit {background-color:#b32f1d;color:#fff !important;border:0 !important;padding:0 15px;font-weight:bold;line-height:36px;text-transform:uppercase;
+    border-radius:30px;
+    -webkit-border-radius: 30px;
+}
+.btnSubmit:hover {background-color:#dc3d27;cursor:pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input:not([type="checkbox"]), .slb {
+    border:1px solid #e1e1e1;font-size:15px;padding:6px 10px;line-height:20px;color:#4e4f4b;margin-bottom:10px;width:100%;
+}
+input:not([type="checkbox"]):focus, .slb:focus {border-color:#222;outline:0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input:not([type="checkbox"]):hover, .slb:hover {border-color:#2f2724;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/*set color for placeholder*/
+::-webkit-input-placeholder {color:#c1c1c1;}
+::-moz-placeholder {color:#c1c1c1;}/*FF19+*/
+:-moz-placeholder {color:#c1c1c1;}/*FF18-*/
+:-ms-input-placeholder {color:#c1c1c1;}
+
+
+
 
 
 .nav {text-transform:uppercase;font-size:14px;line-height:18px;position:relative;margin-top:46px;}

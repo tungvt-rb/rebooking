@@ -1,7 +1,10 @@
 <?php
 
-pll_register_string('mytest', 'Price');
-pll_register_string('mytest', 'Location');
-pll_register_string('mytest', 'SEARCH BY TYPE & LOCATION');
-pll_register_string('mytest', 'No post found!');
-pll_register_string('mytest', 'Bedroom');
+pll_register_string('currency', '$');
+
+pll_register_string('property_details', 'Price');
+pll_register_string('property_details', 'Location');
+pll_register_string('property_details', 'Bedroom');
+
+pll_register_string('page_content', 'SEARCH BY TYPE & LOCATION');
+pll_register_string('page_content', 'No post found!');

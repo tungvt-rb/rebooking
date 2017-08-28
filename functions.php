@@ -6,6 +6,7 @@ require_once ( TEMPLATEPATH . '/inc/classes/class.functions.php' );
 require_once ( TEMPLATEPATH . '/option-tree/ot-loader.php' );
 
 require_once ( TEMPLATEPATH . '/inc/lib/theme-options.php' );
+require_once ( TEMPLATEPATH . '/inc/lib/lib.translate.php' );
 require_once ( TEMPLATEPATH . '/inc/lib/img_resizer.php' );
 require_once ( TEMPLATEPATH . '/inc/lib/breadcrumbs.php' );
 

@@ -78,7 +78,7 @@ get_header();
 										<tr>
 											<td>
 												<div class="tleft"><?php pll_e('Price'); ?></div>
-												<div class="tright"><?php echo $re_price; ?></div>
+												<div class="tright"><?php pll_e('$') ?> <?php echo $re_price; ?></div>
 												<div class="clear"></div>
 											</td>
 											<td>

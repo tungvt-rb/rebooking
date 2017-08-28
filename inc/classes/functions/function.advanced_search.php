@@ -1,0 +1,37 @@
+<?php
+
+if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'advanced' && !is_admin() && $query->is_main_query()) {
+	$query->set('post_type', 'property');
+
+	$_minprice 	= ($_GET['min_price'] != '') ? $_GET['min_price'] : '';
+	$_maxprice 	= ($_GET['max_price'] != '') ? $_GET['max_price'] : '';
+	$_bedrooms 	= ($_GET['bedrooms'] != '') ? $_GET['bedrooms'] : '';
+	$_bathrooms = ($_GET['bathrooms'] != '') ? $_GET['bathrooms'] : '';
+	$_location 	= ($_GET['location'] != '') ? $_GET['location'] : '';
+
+	$meta_query = array(
+		array(
+			'key'		=> 'property_price',
+			'value'		=> array($_minprice, $_maxprice),
+			'type'		=> 'numeric',
+			'compare'	=> 'BETWEEN',
+		),
+		array(
+			'key'		=> 'property_bedroom',
+			'value'		=> $_bedrooms,
+			'compare'	=> 'LIKE',
+		),
+		array(
+			'key'		=> 'property_bathroom',
+			'value'		=> $_bathrooms,
+			'compare'	=> 'LIKE',
+		),		
+		array(
+			'key'		=> 'property_location',
+			'value'		=> $_location,
+			'compare'	=> 'LIKE',
+		),
+	);
+
+	$query->set('meta_query', $meta_query);
+}

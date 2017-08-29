@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	
 	<?php
-		if (is_singular('du-an') || is_single() || is_page()) {
+		if (is_single() || is_page()) {
 			$title = strip_tags(the_title('','',false));
 		}
 	?>

@@ -6,6 +6,115 @@ get_header();
 
 ?>
 
+<div class="wrapper">
+	<div class="property-list">
+		<div class="g-row">
+			<div class="full-width"><h2 class="p-title"><?php pll_e('PROPERTY LIST') ?></h2></div>
+			<div class="clear"></div>
+			
+			<?php
+				$args = array(
+					'post_type' =>'property',
+					'numberposts' => 12,
+					'order' => 'DESC',
+				);
+				$posts = get_posts($args);
+
+				if($posts) {
+					$_post_count=0;
+					foreach($posts as $post) : setup_postdata($post);
+						$_post_count++;
+						$featured_image = aq_resize( wp_get_attachment_url( get_post_thumbnail_id() ,'full') , 280, 280, true );
+
+						$re_price 		= get_post_meta(get_the_ID(), 'property_price', true);
+						$re_area 		= get_post_meta(get_the_ID(), 'property_area', true);
+						$re_builtin 	= get_post_meta(get_the_ID(), 'property_builtin', true);
+						$re_bedroom		= get_post_meta(get_the_ID(), 'property_bedroom', true);
+						$re_bathroom	= get_post_meta(get_the_ID(), 'property_bathroom', true);
+						$re_furnished	= get_post_meta(get_the_ID(), 'property_furnished', true);
+						$re_equipped 	= get_post_meta(get_the_ID(), 'property_equipped', true);
+						$re_location	= get_post_meta(get_the_ID(), 'property_location', true);
+			?>
+			<div class="one-sixth">
+				<?php if( has_post_thumbnail() ) { ?>
+				<div class="tooltip">
+					<a class="thumb tooltip" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
+						<span class="fa fa-search thumb-overlay"></span>
+					</a>
+					<table class="tbl tooltiptext">
+						<thead>
+							<tr><th colspan="2"><?php the_title(); ?></th></tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="tleft"><?php pll_e('Price'); ?></div>
+									<div class="tright"><?php pll_e('$') ?> <?php echo $re_price; ?></div>
+									<div class="clear"></div>
+								</td>
+								<td>
+									<div class="tleft"><?php pll_e('Location'); ?></div>
+									<div class="tright"><?php echo $re_location; ?></div>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="tleft"><?php pll_e('Bedroom'); ?></div>
+									<div class="tright"><?php echo $re_bedroom; ?></div>
+									<div class="clear"></div>
+								</td>
+								<td>
+									<div class="tleft">Bathroom</div>
+									<div class="tright"><?php echo $re_bathroom; ?></div>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="tleft">Living area</div>
+									<div class="tright"><?php echo $re_area; ?></div>
+									<div class="clear"></div>
+								</td>
+								<td>
+									<div class="tleft">Built in</div>
+									<div class="tright"><?php echo $re_builtin; ?></div>
+									<div class="clear"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="tleft">Furnished</div>
+									<div class="tright"><?php echo $re_furnished; ?></div>
+									<div class="clear"></div>
+								</td>
+								<td>
+									<div class="tleft">Equipped</div>
+									<div class="tright"><?php echo $re_equipped; ?></div>
+									<div class="clear"></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<?php } ?>
+			</div>
+			<?php echo ($_post_count%6==0) ? '<div class="clear"></div>' : ''; ?>
+			<?php
+					endforeach;
+					wp_reset_query();
+				} else {
+					echo "<div class='full-width'><h4 style='font-weight:500;'>";
+					pll_e("No post found!");
+					echo "</h4></li>";
+				}
+			?>
+		</div>
+	</div>
+</div>
+
 <div class="wrapper content">
 	<div class="g-row">
 		<div class="full-width"><h2 class="p-title"><?php pll_e('SEARCH BY TYPE & LOCATION') ?></h2></div>
@@ -38,7 +147,7 @@ get_header();
 							)
 						);
 
-						global $post;
+						// global $post;
 						$args = array(
 							'post_type' =>'property',
 							'numberposts' => 3,
@@ -130,6 +239,7 @@ get_header();
 							
 					<?php 
 							endforeach;
+							wp_reset_query();
 						} else {
 							echo "<li><h4 style='font-weight:500;'>";
 							pll_e("No post found!");

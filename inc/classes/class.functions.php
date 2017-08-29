@@ -40,6 +40,7 @@ class REBooking
 		
 		// Filters
 		add_filter('the_excerpt_rss', array(&$this, 'the_excerpt_rss'));
+		add_filter('query_vars', array(&$this, 'register_query_vars'));
 
 		//Newsletter
 		add_action('wp_ajax_vr_contact', array(&$this, 'submit_contact'));
@@ -74,6 +75,16 @@ class REBooking
 
 	function advanced_search_query($query) {
 		require_once ( TEMPLATEPATH . '/inc/classes/functions/function.advanced_search.php' );
+	}
+
+	function register_query_vars($vars) {
+		$vars[] = 'min_price';
+		$vars[] = 'max_price';
+		$vars[] = 'bedrooms';
+		$vars[] = 'bathrooms';
+		$vars[] = 'location';
+
+		return $vars;
 	}
 
 	function the_excerpt_rss($content, $totalWords=30)

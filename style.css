@@ -45,7 +45,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 }
 
 .wrapper {max-width:1200px;margin:0 auto;}
-.wrapper .content {width:100%;padding:50px 0 60px;}
+.content {background:#fafafa;border-left:1px solid #dedede;border-right:1px solid #dedede;}
 .p-title {text-align:center;line-height:30px;margin-bottom:15px;padding:15px 0 0;font-weight:500;}
 
 .button {background-color:#0E5781;color:#fff;border:0;padding:0 15px;font-weight:bold;line-height:36px;text-transform:uppercase;width:50%;
@@ -101,6 +101,9 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .main-nav-container ul li a {color:#fff;display:block;padding:8px 15px;text-transform:uppercase;}
 .main-nav-container ul li a:hover {background:#de5744;color:#fff;}
 .main-nav-container ul li.current-menu-item a {background:#de5744;color:#fff;font-weight:500;}
+
+.head-info {padding:5px 0;}
+.head-info img {width:100%;}
 
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}

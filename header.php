@@ -75,6 +75,19 @@
 			<?php wp_nav_menu(array('menu'=>'main-menu', 'menu_id'=>'main-nav', 'menu_class'=>'main-nav', 'container'=>false)); ?>
 		</div>
 
+		<?php if (is_page_template('template-landing.php')) { ?>
+		<div class="head-info content">
+			<div class="g-row">
+				<div class="one-half">
+					<iframe width="100%" height="268" src="https://www.youtube.com/embed/h48kEQWwm1Q" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="one-half">
+					<img src="<?php bloginfo('template_url');?>/assets/images/map-home2.jpg">
+				</div>
+			</div>
+		</div><!-- .head-info -->
+		<?php } ?>
+
 	</div><!-- .wrapper -->
 
 	<div class="wrapper">
@@ -112,10 +125,10 @@
 						<div class="one-third">
 							<select name="location" id="location" class="slb">
 								<option value=""><?php pll_e('Location') ?></option>
-								<option value="Tay Ho"><?php _e( 'Tay Ho', 'textdomain' ); ?></option>
-								<option value="Thanh Xuan"><?php _e( 'Thanh Xuan', 'textdomain' ); ?></option>
-								<option value="Ba Dinh"><?php _e( 'Ba Dinh', 'textdomain' ); ?></option>
-								<option value="Cau Giay"><?php _e( 'Cau Giay', 'textdomain' ); ?></option>
+								<option value="Tay Ho" <?php echo ($_GET['location'] == 'Tay Ho') ? 'selected' : '' ?>><?php _e( 'Tay Ho', 'textdomain' ); ?></option>
+								<option value="Thanh Xuan" <?php echo ($_GET['location'] == 'Thanh Xuan') ? 'selected' : '' ?>><?php _e( 'Thanh Xuan', 'textdomain' ); ?></option>
+								<option value="Ba Dinh" <?php echo ($_GET['location'] == 'Ba Dinh') ? 'selected' : '' ?>><?php _e( 'Ba Dinh', 'textdomain' ); ?></option>
+								<option value="Cau Giay" <?php echo ($_GET['location'] == 'Cau Giay') ? 'selected' : '' ?>><?php _e( 'Cau Giay', 'textdomain' ); ?></option>
 							</select>
 						</div>
 						<div class="clear"></div>

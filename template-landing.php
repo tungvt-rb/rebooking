@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<div class="wrapper">
+<div class="wrapper content">
 	<div class="g-row">
 		<div class="full-width"><h2 class="p-title"><?php pll_e('SEARCH BY TYPE & LOCATION') ?></h2></div>
 		<div class="clear"></div>

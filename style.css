@@ -118,12 +118,20 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 .property-list {border-left:1px solid #dedede;border-right:1px solid #dedede;border-bottom:1px solid #dedede;padding:15px 0;}
 
+.property-item {background:#dce4d5;border:1px solid #c0c0c0;padding:5px;margin-bottom:10px;}
+.item-thumb {float:left;width:163px;border:1px solid #2c83a3;}
+.item-thumb .thumb {border:none;margin-bottom:0;}
+.item-info {float:right;width:100%;}
+.item-info .tbl {width:100%;border-left:none;}
+.item-info .tbl th {border-top:none;}
+
 /* TABLE HOVER */
 .tbl {border:1px solid #2c83a3;line-height:18px;}
 .tbl th {font-size:13px;font-weight:500;text-align:center;background:#b9c9fe;border-top:4px solid #2c83a3;
     border-bottom:1px solid #fff;color:#039;padding:8px;
 }
-.tbl td {background:#e8edff;color:#669;border-top:1px solid transparent;border-bottom:1px solid #fff;font-size:12px;}
+.tbl td {background:#e8edff;color:#669;border-bottom:1px solid #fff;font-size:12px;}
+.tbl tr:last-child td {border-bottom:none;}
 .tbl td .tleft, .tbl td .tright {float:left;background:#b9c9fe;width:50%;padding:5px 8px;font-weight:500;}
 .tbl td .tright {float:right;background:#e8edff;text-align:right;color:#000;font-weight:400;}
 
@@ -133,7 +141,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tooltip .tooltiptext::after {content:"";position:absolute;top:100%;left:50%;margin-left:-5px;
     border-width:5px;
     border-style:solid;
-    border-color:#2f2724 transparent transparent transparent;
+    border-color:#2c83a3 transparent transparent transparent;
 }
 .tooltip:hover .tooltiptext {visibility:visible;}
 .property-list .tooltip:hover .tooltiptext {bottom:190px;left:-85px;}
@@ -261,8 +269,10 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 .one-sixth {width:100%;float:left;padding:0 5px;position:relative;}
 .five-sixths {width:100%;float:left;padding:0 5px;position:relative;}
 .centered {float:none;margin:0 auto;}
-.one-half.no-pad {padding:0 !important;}
-.one-third.no-full {width:33.33333% !important;}
+.no-pad {padding:0 !important;}
+.no-full {width:33.33333% !important;}
+.no-pl {padding-left:0 !important;}
+.no-pr {padding-right:0 !important;}
 
 /* ======================= Reponsive ======================= */
 @media screen and (min-width:480px) {
@@ -275,6 +285,8 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 }
 
 @media screen and (min-width:768px) {
+    .item-info {width:78%;}
+
     .header .toggle, .header .toggle-nav {display:none;}
     
     .nav ul {display:table;}
@@ -282,6 +294,7 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 }
 
 @media screen and (min-width:830px) {
+
 	
     /* grid */
     .one-half {width:50%;}
@@ -295,6 +308,8 @@ a.toggle:hover {background:#bae4b0;color:#000;}
     .four-fifths {width:80%;}
     .one-sixth {width:16.66667%;}
     .five-sixths {width:83.33333%;}
+    .no-pl {padding-left:5px !important;}
+    .no-pr {padding-right:5px !important;}
 }
 
 @media screen and (min-width:960px) {
@@ -302,9 +317,9 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 }
 
 @media screen and (min-width:1024px) {
-    
+    .item-info {width:70%;}
 }
 
 @media screen and (min-width:1100px) {
-    
+    .item-info {width:79%;}
 }

@@ -98,8 +98,16 @@
 				</div>
 				<div class="three-quarters">
 					<h3><?php pll_e('Property Search') ?></h3>
-
-					<form method="get" id="advanced-searchform" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<?php
+						$action = esc_url( site_url('/') );
+						
+						if (pll_current_language() == 'vi') {
+							$action = esc_url( site_url('/') . 'vi/' );
+						} else {
+							$action = esc_url( site_url('/') );
+						}
+					?>
+					<form method="get" id="advanced-searchform" role="search" action="<?php echo $action; ?>">
 						<input type="hidden" name="search" value="advanced">
 
 						<div class="one-third">

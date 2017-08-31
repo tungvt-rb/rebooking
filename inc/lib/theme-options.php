@@ -202,6 +202,26 @@ function custom_theme_options() {
 					)
 				),
 				array(
+					'id'			=> 'property_bathroom_type',
+					'label'			=> __( 'Bathroom Type', 'text-domain' ),
+					'desc'			=> __( 'Types of bathrooms', 'text-domain' ),
+					'type'			=> 'select',
+					'choices'		=> array(
+						array(
+							'value'		=> 'None',
+							'label'		=> __( 'None', 'text-domain' ),
+						),
+						array(
+							'value'		=> 'Shower cabin',
+							'label'		=> __( 'Shower cabin', 'text-domain' ),
+						),
+						array(
+							'value'		=> 'Bathtub & Shower',
+							'label'		=> __( 'Bathtub & Shower', 'text-domain' ),
+						)
+					)
+				),
+				array(
 					'id'			=> 'property_furnished',
 					'label'			=> __( 'Furnished', 'text-domain' ),
 					'desc'			=> __( 'Furnished', 'text-domain' ),

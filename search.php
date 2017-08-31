@@ -12,14 +12,13 @@
 						$_count++;
 						$featured_image = aq_resize( wp_get_attachment_url( get_post_thumbnail_id() ,'full') , 300, 280, true );
 
-						$re_price 		= get_post_meta(get_the_ID(), 'property_price', true);
-						$re_area 		= get_post_meta(get_the_ID(), 'property_area', true);
-						$re_builtin 	= get_post_meta(get_the_ID(), 'property_builtin', true);
-						$re_bedroom		= get_post_meta(get_the_ID(), 'property_bedroom', true);
-						$re_bathroom	= get_post_meta(get_the_ID(), 'property_bathroom', true);
-						$re_furnished	= get_post_meta(get_the_ID(), 'property_furnished', true);
-						$re_equipped 	= get_post_meta(get_the_ID(), 'property_equipped', true);
-						$re_location	= get_post_meta(get_the_ID(), 'property_location', true);
+						$re_price 			= get_post_meta(get_the_ID(), 'property_price', true);
+						$re_area 			= get_post_meta(get_the_ID(), 'property_area', true);
+						$re_builtin 		= get_post_meta(get_the_ID(), 'property_builtin', true);
+						$re_bedroom			= get_post_meta(get_the_ID(), 'property_bedroom', true);
+						$re_bathroom		= get_post_meta(get_the_ID(), 'property_bathroom', true);
+						$re_bathroom_type	= get_post_meta(get_the_ID(), 'property_bathroom_type', true);
+						$re_location		= get_post_meta(get_the_ID(), 'property_location', true);
 				?>
 				<div class="property-item">
 					<?php if( has_post_thumbnail() ) { ?>
@@ -39,7 +38,7 @@
 								<tr>
 									<td>
 										<div class="tleft"><?php pll_e('Price'); ?></div>
-										<div class="tright"><?php pll_e('$') ?> <?php echo $re_price; ?></div>
+										<div class="tright"><i class="fa fa-money"></i> <?php pll_e('$') ?> <?php echo $re_price; ?></div>
 										<div class="clear"></div>
 									</td>
 									<td>
@@ -50,37 +49,38 @@
 								</tr>
 								<tr>
 									<td>
-										<div class="tleft"><?php pll_e('Bedroom'); ?></div>
-										<div class="tright"><?php echo $re_bedroom; ?></div>
+										<div class="tleft"><?php pll_e('Location'); ?></div>
+										<div class="tright"><i class="fa fa-map-marker"></i> <?php echo $re_location; ?></div>
 										<div class="clear"></div>
 									</td>
 									<td>
-										<div class="tleft">Bathroom</div>
-										<div class="tright"><?php echo $re_bathroom; ?></div>
+										<div class="tleft"><?php pll_e('Living area') ?></div>
+										<div class="tright"><i class="fa fa-expand"></i> <?php echo $re_area; ?> <span>m<sup>2</sup></span></div>
 										<div class="clear"></div>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<div class="tleft">Living area</div>
-										<div class="tright"><?php echo $re_area; ?></div>
+										<div class="tleft"><?php pll_e('Bathroom') ?></div>
+										<div class="tright"><i class="fa fa-bath"></i></i> <?php echo $re_bathroom; ?></div>
 										<div class="clear"></div>
 									</td>
 									<td>
+										<div class="tleft"><?php pll_e('Bathroom Type') ?></div>
+										<div class="tright"><i class="fa fa-bath"></i> <i class="fa fa-shower"></i> <?php echo $re_bathroom_type; ?></div>
+										<div class="clear"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="tleft"><?php pll_e('Bedroom'); ?></div>
+										<div class="tright"><i class="fa fa-bed"></i> <?php echo $re_bedroom; ?></div>
+										<div class="clear"></div>
+									</td>
+									<td>
+
 										<div class="tleft">Built in</div>
 										<div class="tright"><?php echo $re_builtin; ?></div>
-										<div class="clear"></div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class="tleft">Furnished</div>
-										<div class="tright"><?php echo $re_furnished; ?></div>
-										<div class="clear"></div>
-									</td>
-									<td>
-										<div class="tleft">Equipped</div>
-										<div class="tright"><?php echo $re_equipped; ?></div>
 										<div class="clear"></div>
 									</td>
 								</tr>

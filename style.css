@@ -127,13 +127,18 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 /* TABLE HOVER */
 .tbl {border:1px solid #2c83a3;line-height:18px;}
-.tbl th {font-size:13px;font-weight:500;text-align:center;background:#b9c9fe;border-top:4px solid #2c83a3;
+.tbl th {font-size:13px;font-weight:500;text-align:center;background:#59c7ef;border-top:4px solid #2c83a3;
     border-bottom:1px solid #fff;color:#039;padding:8px;
 }
-.tbl td {background:#e8edff;color:#669;border-bottom:1px solid #fff;font-size:12px;}
+.tbl td {background:#e8edff;color:#296dba;border-bottom:1px solid #fff;font-size:12px;width:50%;}
 .tbl tr:last-child td {border-bottom:none;}
-.tbl td .tleft, .tbl td .tright {float:left;background:#b9c9fe;width:50%;padding:5px 8px;font-weight:500;}
+.tbl td .tleft, .tbl td .tright {float:left;background:#89d4ef;width:50%;padding:5px 8px;font-weight:500;}
 .tbl td .tright {float:right;background:#e8edff;text-align:right;color:#000;font-weight:400;}
+.tbl td .tright i {float:left;line-height:18px;font-size:16px;}
+.tbl td .tright span {position:relative;margin-right:5px;}
+.tbl td .tright span sup {position:absolute;bottom:2px;}
+
+.item-info .tbl {}
 
 /* TOOLTIP */
 .tooltip {position:relative;}

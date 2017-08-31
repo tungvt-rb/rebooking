@@ -42,61 +42,7 @@ get_header();
 						<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
 						<span class="fa fa-search thumb-overlay"></span>
 					</a>
-					<table class="tbl tooltiptext">
-						<thead>
-							<tr><th colspan="2"><?php the_title(); ?></th></tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="tleft"><?php pll_e('Price'); ?></div>
-									<div class="tright"><?php pll_e('$') ?> <?php echo $re_price; ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><?php pll_e('Location'); ?></div>
-									<div class="tright"><?php echo $re_location; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="tleft"><?php pll_e('Bedroom'); ?></div>
-									<div class="tright"><?php echo $re_bedroom; ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft">Bathroom</div>
-									<div class="tright"><?php echo $re_bathroom; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="tleft">Living area</div>
-									<div class="tright"><?php echo $re_area; ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft">Built in</div>
-									<div class="tright"><?php echo $re_builtin; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="tleft">Furnished</div>
-									<div class="tright"><?php echo $re_furnished; ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft">Equipped</div>
-									<div class="tright"><?php echo $re_equipped; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<?php require ( TEMPLATEPATH . '/inc/tpl-parts/template.table_hover.php' ); ?>
 				</div>
 				
 				<?php } ?>
@@ -179,61 +125,7 @@ get_header();
 							<h4 class="tooltip">
 								<i class="fa fa-bookmark"></i>
 								<a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth($post->post_title, 0, 50, '...') ?></a>
-								<table class="tbl tooltiptext">
-									<thead>
-										<tr><th colspan="2"><?php the_title(); ?></th></tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<div class="tleft"><?php pll_e('Price'); ?></div>
-												<div class="tright"><?php pll_e('$') ?> <?php echo $re_price; ?></div>
-												<div class="clear"></div>
-											</td>
-											<td>
-												<div class="tleft"><?php pll_e('Location'); ?></div>
-												<div class="tright"><?php echo $re_location; ?></div>
-												<div class="clear"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="tleft"><?php pll_e('Bedroom'); ?></div>
-												<div class="tright"><?php echo $re_bedroom; ?></div>
-												<div class="clear"></div>
-											</td>
-											<td>
-												<div class="tleft">Bathroom</div>
-												<div class="tright"><?php echo $re_bathroom; ?></div>
-												<div class="clear"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="tleft">Living area</div>
-												<div class="tright"><?php echo $re_area; ?></div>
-												<div class="clear"></div>
-											</td>
-											<td>
-												<div class="tleft">Built in</div>
-												<div class="tright"><?php echo $re_builtin; ?></div>
-												<div class="clear"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="tleft">Furnished</div>
-												<div class="tright"><?php echo $re_furnished; ?></div>
-												<div class="clear"></div>
-											</td>
-											<td>
-												<div class="tleft">Equipped</div>
-												<div class="tright"><?php echo $re_equipped; ?></div>
-												<div class="clear"></div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+								<?php require ( TEMPLATEPATH . '/inc/tpl-parts/template.table_hover.php' ); ?>
 							</h4>
 						</li>
 							

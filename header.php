@@ -16,7 +16,7 @@
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Tungvt">
-	<link rel="icon" type="favicon" href="<?php bloginfo('template_url');?>/assets/images/favicon-1.png">
+	<link rel="icon" type="favicon" href="<?php bloginfo('template_url');?>/assets/images/favicon.ico">
 	
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/assets/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css">

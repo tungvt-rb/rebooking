@@ -8,7 +8,7 @@
 				<div class="two-thirds">
 					<h1 class="p-title"><?php the_title(); ?></h1>
 
-					<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+					<?php if (function_exists('kmf_breadcrumbs')) kmf_breadcrumbs(); ?>
 
 					<?php the_content(); ?>
 
@@ -19,6 +19,7 @@
 				</div>
 			</div>
 		</div><!-- .wrapper -->
+		
 		
 	<?php endwhile; ?>
 <?php endif; ?>

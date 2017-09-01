@@ -2,9 +2,11 @@
 
 	<div class="wrapper content">
 		<div class="g-row">
+			<div class="full-width">
+				<?php if (function_exists('kmf_breadcrumbs')) kmf_breadcrumbs(); ?>
+			</div>
+			<div class="clear"></div>
 			<div class="two-thirds">
-
-				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 
 				<?php
 					$_count = 0;

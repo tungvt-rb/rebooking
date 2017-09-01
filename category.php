@@ -9,7 +9,7 @@
 					<div class="two-thirds">
 						<h1 class="single-title"><?php the_title(); ?></h1>
 
-						<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+						<?php if (function_exists('kmf_breadcrumbs')) kmf_breadcrumbs(); ?>
 
 						<div class="single-body">
 								<?php

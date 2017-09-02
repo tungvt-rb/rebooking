@@ -14,3 +14,5 @@ pll_register_string('Equipped', 'Equipped', 'property_details');
 
 pll_register_string('Page title', 'SEARCH BY TYPE & LOCATION', 'page_content');
 pll_register_string('Message info', 'No post found!', 'page_content');
+
+pll_register_string('Label control', 'View detail', 'control');

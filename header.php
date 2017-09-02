@@ -64,7 +64,7 @@
 					<!-- .logo -->
 				</div>
 				<div class="one-third">
-					<h2><?php pll_e('HANOI HOUSING SERVICE') ?></h2>
+					<h2><?php pll_e('HANOI HOUSING SERVICES') ?></h2>
 				</div>
 				<div class="one-third">
 					<?php wp_nav_menu(array('menu'=>'switcher-menu', 'menu_id'=>'lang-nav', 'menu_class'=>'lang-switcher-nav', 'container'=>false)); ?>

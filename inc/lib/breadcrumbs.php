@@ -11,7 +11,7 @@ function kmf_breadcrumbs() {
 	/* OPTIONS */
 	$text['home']		= '<i class="fa fa-home"></i>';
 	$text['category']	= 'Archive by category "%s"';
-	$text['search']		= 'Search results for "%s"';
+	$text['search']		= 'Search results';
 	$text['tag']		= 'Posts tagged "%s"';
 	$text['author']		= 'Articles posted by "%s"';
 	$text['404']		= 'Error 404 "%s"';

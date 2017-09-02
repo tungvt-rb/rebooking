@@ -47,8 +47,8 @@
 			</td>
 			<td>
 
-				<div class="tleft">Built in</div>
-				<div class="tright"><?php echo $re_builtin; ?></div>
+				<div class="tleft"><?php pll_e('Built in') ?> <span><i class="fa fa-building-o"></i> <?php echo $re_builtin; ?></span></div>
+				<div class="tright"><a class="view-detail" href="<?php the_permalink(); ?>"><?php pll_e('View detail') ?></a></div>
 				<div class="clear"></div>
 			</td>
 		</tr>

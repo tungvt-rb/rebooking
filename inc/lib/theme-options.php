@@ -146,6 +146,12 @@ function custom_theme_options() {
 					'type'			=> 'text',
 				),
 				array(
+					'id'			=> 'property_floor',
+					'label'			=> __( 'Number floor', 'text-domain' ),
+					'desc'			=> __( 'Number floor of house', 'text-domain' ),
+					'type'			=> 'text',
+				),
+				array(
 					'id'			=> 'property_bedroom',
 					'label'			=> __( 'Bedroom', 'text-domain' ),
 					'desc'			=> __( 'Number bedroom', 'text-domain' ),
@@ -235,6 +241,10 @@ function custom_theme_options() {
 							'value'		=> 'Fully',
 							'label'		=> __( 'Fully', 'text-domain' ),
 						),
+						array(
+							'value'		=> 'Semi',
+							'label'		=> __( 'Semi', 'text-domain' ),
+						),
 					)
 				),
 				array(
@@ -250,6 +260,34 @@ function custom_theme_options() {
 						array(
 							'value'		=> 'Fully',
 							'label'		=> __( 'Fully', 'text-domain' ),
+						),
+						array(
+							'value'		=> 'Semi',
+							'label'		=> __( 'Semi', 'text-domain' ),
+						),
+					)
+				),
+				array(
+					'id'			=> 'property_balcony',
+					'label'			=> __( 'Balcony', 'text-domain' ),
+					'desc'			=> __( 'Balcony and Garden', 'text-domain' ),
+					'type'			=> 'select',
+					'choices'		=> array( 
+						array(
+							'value'		=> 'None',
+							'label'		=> __( 'None', 'text-domain' ),
+						),
+						array(
+							'value'		=> 'Balcony',
+							'label'		=> __( 'Balcony', 'text-domain' ),
+						),
+						array(
+							'value'		=> 'Garden',
+							'label'		=> __( 'Garden', 'text-domain' ),
+						),
+						array(
+							'value'		=> 'GardenBalcony',
+							'label'		=> __( 'Garden & Balcony', 'text-domain' ),
 						),
 					)
 				),
@@ -310,6 +348,57 @@ function custom_theme_options() {
 					)
 				),
 
+			),
+		),
+		array(
+			'id'			=> 'property_detail',
+			'title'			=> 'Property Details',
+			'pages'			=> array( 'property' ),
+			'context'		=> 'normal',
+			'priority'		=> 'core',
+			'fields'		=> array(
+				array(
+					'id'			=> 'property_free_services',
+					'label'			=> __('Free Services', 'text-domain'),
+					'desc'			=> __('Free Services infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_pay_services',
+					'label'			=> __('Pay Services', 'text-domain'),
+					'desc'			=> __('Pay Services infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_envoiment',
+					'label'			=> __('Envoiment', 'text-domain'),
+					'desc'			=> __('Envoiment infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_futniture',
+					'label'			=> __('Furniture', 'text-domain'),
+					'desc'			=> __('Furniture infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_equipment',
+					'label'			=> __('Equipment', 'text-domain'),
+					'desc'			=> __('Equipment infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_kitchen',
+					'label'			=> __('Kitchen', 'text-domain'),
+					'desc'			=> __('Kitchen infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_details',
+					'label'			=> __('Details', 'text-domain'),
+					'desc'			=> __('Details infomation', 'text-domain'),
+					'type'			=> 'text',
+				),
 			),
 		),
 

@@ -21,6 +21,7 @@
 						$re_bathroom		= get_post_meta(get_the_ID(), 'property_bathroom', true);
 						$re_bathroom_type	= get_post_meta(get_the_ID(), 'property_bathroom_type', true);
 						$re_location		= get_post_meta(get_the_ID(), 'property_location', true);
+						$re_includeof		= get_post_meta(get_the_ID(), 'property_kitchen', true);
 				?>
 				<div class="property-item">
 					<?php if( has_post_thumbnail() ) { ?>

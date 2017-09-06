@@ -27,6 +27,12 @@
 			}, 'json');
 		});
 
+		$('.bxslider').bxSlider({
+			mode: 'fade',
+			captions: true,
+			auto: true,
+		});
+
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 100) {
 				$('#back-top').fadeIn();

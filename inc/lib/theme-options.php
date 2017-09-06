@@ -121,6 +121,33 @@ function custom_theme_options() {
 			)
 		),
 		array(
+			'id'			=> 'businessman_detail',
+			'title'			=> 'Businessman Details',
+			'pages'			=> array( 'businessman' ),
+			'context'		=> 'side',
+			'priority'		=> 'core',
+			'fields'		=> array(
+				array(
+					'id'			=> 'businessman_mobile',
+					'label'			=> __( 'Mobile', 'text-domain' ),
+					'desc'			=> __( 'mobile', 'text-domain' ),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'businessman_email',
+					'label'			=> __( 'Email', 'text-domain' ),
+					'desc'			=> __( 'email', 'text-domain' ),
+					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'businessman_notes',
+					'label'			=> __( 'Notes', 'text-domain' ),
+					'desc'			=> __( 'like eng. speaking or somethings...', 'text-domain' ),
+					'type'			=> 'text',
+				),
+			),
+		),
+		array(
 			'id'			=> 'property_option',
 			'title'			=> 'Property Options',
 			'pages'			=> array( 'property' ),
@@ -376,7 +403,7 @@ function custom_theme_options() {
 					'type'			=> 'text',
 				),
 				array(
-					'id'			=> 'property_futniture',
+					'id'			=> 'property_furniture',
 					'label'			=> __('Furniture', 'text-domain'),
 					'desc'			=> __('Furniture infomation', 'text-domain'),
 					'type'			=> 'text',
@@ -398,6 +425,19 @@ function custom_theme_options() {
 					'label'			=> __('Details', 'text-domain'),
 					'desc'			=> __('Details infomation', 'text-domain'),
 					'type'			=> 'text',
+				),
+				array(
+					'id'			=> 'property_contact_person',
+					'label'			=> __('Contact person', 'text-domain'),
+					'desc'			=> __('Include person to contact', 'text-domain'),
+					'type'			=> 'custom-post-type-select',
+					'post_type'		=> 'businessman',
+				),
+				array(
+					'id'			=> 'property_gallery',
+					'label'			=> __('Gallery', 'text-domain'),
+					'desc'			=> __('Gallery property', 'text-domain'),
+					'type'			=> 'gallery',
 				),
 			),
 		),

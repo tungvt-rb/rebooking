@@ -34,6 +34,12 @@
 				</li>
 				<?php endforeach; ?>
 			</ul>
+
+			<div class="property_details">
+				<h3><?php pll_e('Details of apartment for rent') ?></h3>
+
+				
+			</div>
 		
 
 			<?php

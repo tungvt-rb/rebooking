@@ -105,6 +105,8 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .head-info {padding:5px 0;}
 .head-info img {width:100%;}
 
+.widget-block {background:#fff;}
+
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}
 .re-catname {background:#2f2724;margin:3px 3px 10px 3px;text-transform:uppercase;padding:0 10px;border-top-left-radius:5px;border-top-right-radius:5px;font-size:15px;}
@@ -125,7 +127,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .item-info .tbl {width:100%;border-left:none;}
 .item-info .tbl th {border-top:none;}
 
-/* TABLE HOVER */
+/* TABLE STYLE */
 .tbl {border:1px solid #2c83a3;line-height:18px;}
 .tbl th {font-size:13px;font-weight:500;text-align:center;background:#59c7ef;border-top:4px solid #2c83a3;
     border-bottom:1px solid #fff;color:#039;padding:8px;
@@ -140,6 +142,12 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tbl td .tleft span {float:right;color:#000;}
 .tbl .view-detail {font-weight:500;color:#b32f1d;}
 .tbl .view-detail:hover {color:#de5744;}
+
+.tbl-services {margin-bottom:15px;}
+.tbl-services table {width:100%;border:1px solid #2c83a3;font-size:15px;}
+.tbl-services table th {width:150px;background:#89d4ef;padding:5px 8px;font-weight:500;border-right:1px solid #2c83a3;border-bottom:1px solid #2c83a3;}
+.tbl-services table td {padding:5px;border-bottom:1px solid #2c83a3;}
+.tbl-services table tr:last-child td, .tbl-services table tr:last-child th {border-bottom:none;}
 
 /* TOOLTIP */
 .tooltip {position:relative;}

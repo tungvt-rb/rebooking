@@ -397,9 +397,9 @@ function custom_theme_options() {
 					'type'			=> 'text',
 				),
 				array(
-					'id'			=> 'property_envoiment',
-					'label'			=> __('Envoiment', 'text-domain'),
-					'desc'			=> __('Envoiment infomation', 'text-domain'),
+					'id'			=> 'property_environment',
+					'label'			=> __('Environment', 'text-domain'),
+					'desc'			=> __('Environment infomation', 'text-domain'),
 					'type'			=> 'text',
 				),
 				array(

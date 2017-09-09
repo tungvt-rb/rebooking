@@ -7,7 +7,7 @@
 
 			$re_free_services		= get_post_meta( get_the_ID(), 'property_free_services', true );
 			$re_pay_services		= get_post_meta( get_the_ID(), 'property_pay_services', true );
-			$re_envoiment			= get_post_meta( get_the_ID(), 'property_envoiment', true );
+			$re_environment			= get_post_meta( get_the_ID(), 'property_environment', true );
 			$re_furniture			= get_post_meta( get_the_ID(), 'property_furniture', true );
 			$re_equipment			= get_post_meta( get_the_ID(), 'property_equipment', true );
 			$re_details				= get_post_meta( get_the_ID(), 'property_details', true );
@@ -35,28 +35,46 @@
 				<?php endforeach; ?>
 			</ul>
 
-			<div class="property_details">
+			<div class="property-details">
 				<h3><?php pll_e('Details of apartment for rent') ?></h3>
 
-				
-			</div>
-		
-
-			<?php
-				// var_dump($re_gallery_img_ids);
-				// foreach ($re_gallery_img_ids as $key => $value) {
-				// 	$img = wp_get_attachment_image_src($value, 'full');
-				// 	var_dump($img);
-				// 	if($img) {
-				// 		echo $img[0];
-				// 		echo get_the_excerpt($value);
-				// 	}
-				// }
-			?>
+				<div class="tbl-services">
+					<table>
+						<tbody>
+							<tr>
+								<th><?php pll_e('Free services') ?></th>
+								<td><?php echo $re_free_services; ?></td>
+							</tr>
+							<tr>
+								<th><?php pll_e('Pay Services') ?></th>
+								<td><?php echo $re_pay_services ?></td>
+							</tr>
+							<tr>
+								<th><?php pll_e('Environment') ?></th>
+								<td><?php echo $re_environment ?></td>
+							</tr>
+							<tr>
+								<th><?php pll_e('Furniture') ?></th>
+								<td><?php echo $re_furniture ?></td>
+							</tr>
+							<tr>
+								<th><?php pll_e('Equipment') ?></th>
+								<td><?php echo $re_equipment ?></td>
+							</tr>
+							<tr>
+								<th><?php pll_e('Details') ?></th>
+								<td><?php echo $re_details ?></td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- .tbl-services -->
+			</div><!-- .property-details -->
 		</div>
 
 		<div class="one-third">
-			<?php dynamic_sidebar( 'default-sidebar' ); ?>
+			<div class="widget-block">
+				<?php dynamic_sidebar( 'default-sidebar' ); ?>
+			</div>
 		</div>
 	</div>
 </div><!-- .wrapper -->

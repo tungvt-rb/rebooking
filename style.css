@@ -108,6 +108,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .widget-block {background:#fff;padding:10px 15px;border:1px solid #c0c0c0;}
 
 .property-details h3 {font-size:26px;font-weight:500;text-align:center;margin-bottom:15px;line-height:40px;}
+.property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;margin-bottom:15px;}
 
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}
@@ -129,9 +130,6 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .item-info .tbl {width:100%;border-left:none;}
 .item-info .tbl th {border-top:none;}
 
-.tbl-details {padding:8px;background:#fff;border:1px solid #c0c0c0;margin-bottom:15px;}
-.tbl-details table {width:100%;}
-
 /* TABLE STYLE */
 .tbl {border:1px solid #2c83a3;line-height:18px;}
 .tbl th {font-size:13px;font-weight:500;text-align:center;background:#59c7ef;border-top:4px solid #2c83a3;
@@ -148,9 +146,17 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tbl .view-detail {font-weight:500;color:#b32f1d;}
 .tbl .view-detail:hover {color:#de5744;}
 
-.tbl-services {margin-bottom:15px;padding:8px;background:#fff;border:1px solid #c0c0c0;}
+.tbl-details {padding:5px;background:#fff;border:1px solid #c0c0c0;margin-bottom:15px;}
+.tbl-details table {width:100%;}
+.tbl-details .tbl td {width:33.333333%;border-right:1px solid #fff;font-size:13px;font-weight:500;}
+.tbl-details .tbl tr td:last-child {border-right:none;}
+.tbl-details .tbl td .tleft {background:#e8edff;color:#000;}
+.tbl-details .tbl td .tleft img {float:left;}
+.tbl-details .tbl td .tleft img.icon-balcony {margin-left:-3px;}
+
+.tbl-services {padding:5px;margin-bottom:15px;background:#fff;border:1px solid #c0c0c0;}
 .tbl-services table {width:100%;border:1px solid #2c83a3;font-size:14px;}
-.tbl-services table th {width:150px;background:#89d4ef;padding:5px 10px;font-weight:500;border-right:1px solid #2c83a3;border-bottom:1px solid #2c83a3;}
+.tbl-services table th {color:#296dba;width:150px;background:#89d4ef;padding:5px 10px;font-weight:500;border-right:1px solid #2c83a3;border-bottom:1px solid #2c83a3;}
 .tbl-services table td {padding:5px 10px;border-bottom:1px solid #2c83a3;line-height:26px;}
 .tbl-services table tr:last-child td, .tbl-services table tr:last-child th {border-bottom:none;}
 
@@ -172,6 +178,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .breadcrumbs li a {display:block;padding:5px 20px 5px 30px;background:#b32f1d;color:#fff;text-transform:uppercase;border-radius:0 100px 100px 0;position:relative;box-shadow:0 0 20px rgba(0,0,0,0.4);}
 .breadcrumbs li a:hover {}
 .breadcrumbs li.current {background:#dce4d5;padding:5px 20px 5px 25px;border-radius:0 100px 100px 0;}
+
 /* THUMB */
 .thumb {display:block;position:relative;overflow:hidden;border:2px solid #2c83a3;margin-bottom:10px;}
 .thumb img {width:100%;height:auto;

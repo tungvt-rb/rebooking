@@ -10,18 +10,23 @@
 			$re_environment			= get_post_meta( get_the_ID(), 'property_environment', true );
 			$re_furniture			= get_post_meta( get_the_ID(), 'property_furniture', true );
 			$re_equipment			= get_post_meta( get_the_ID(), 'property_equipment', true );
+			$re_kitchen				= get_post_meta( get_the_ID(), 'property_kitchen', true );
 			$re_details				= get_post_meta( get_the_ID(), 'property_details', true );
+			$re_balcony				= get_post_meta( get_the_ID(), 'property_balcony', true );
 			$re_gallery				= get_post_meta( get_the_ID(), 'property_gallery', true );
 			$re_gallery_img_ids		= wp_parse_id_list( $re_gallery );
 
-			$re_price 			= get_post_meta(get_the_ID(), 'property_price', true);
-			$re_area 			= get_post_meta(get_the_ID(), 'property_area', true);
-			$re_builtin 		= get_post_meta(get_the_ID(), 'property_builtin', true);
-			$re_bedroom			= get_post_meta(get_the_ID(), 'property_bedroom', true);
-			$re_bathroom		= get_post_meta(get_the_ID(), 'property_bathroom', true);
-			$re_bathroom_type	= get_post_meta(get_the_ID(), 'property_bathroom_type', true);
-			$re_location		= get_post_meta(get_the_ID(), 'property_location', true);
-			$re_includeof		= get_post_meta(get_the_ID(), 'property_kitchen', true);
+			$re_price 				= get_post_meta(get_the_ID(), 'property_price', true);
+			$re_area 				= get_post_meta(get_the_ID(), 'property_area', true);
+			$re_builtin 			= get_post_meta(get_the_ID(), 'property_builtin', true);
+			$re_bedroom				= get_post_meta(get_the_ID(), 'property_bedroom', true);
+			$re_bathroom			= get_post_meta(get_the_ID(), 'property_bathroom', true);
+			$re_bathroom_type		= get_post_meta(get_the_ID(), 'property_bathroom_type', true);
+			$re_location			= get_post_meta(get_the_ID(), 'property_location', true);
+			$re_includeof			= get_post_meta(get_the_ID(), 'property_kitchen', true);
+			$re_furnished			= get_post_meta(get_the_ID(), 'property_furnished', true);
+			$re_equipped			= get_post_meta(get_the_ID(), 'property_equipped', true);
+			$re_floor				= get_post_meta(get_the_ID(), 'property_floor', true);
 ?>
 
 <div class="wrapper content">
@@ -52,49 +57,52 @@
 						<tbody>
 							<tr>
 								<td>
-									<div class="tleft"><?php pll_e('Price'); ?></div>
-									<div class="tright"><i class="fa fa-money"></i> <?php pll_e('$') ?> <?php echo $re_price; ?></div>
+									<div class="tleft"><i class="fa fa-object-group"></i></div>
+									<div class="tright"><?php echo $re_furnished; ?> <?php pll_e('Furnished'); ?></div>
 									<div class="clear"></div>
 								</td>
 								<td>
-									<div class="tleft"><?php pll_e('Location'); ?></div>
-									<div class="tright"><i class="fa fa-map-marker"></i> <?php echo $re_location; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="tleft"><?php pll_e('Bedroom'); ?></div>
-									<div class="tright"><i class="fa fa-bed"></i> <?php echo $re_bedroom; ?></div>
+									<div class="tleft"><i class="fa fa-object-group"></i></div>
+									<div class="tright"><?php echo $re_equipped; ?> <?php pll_e('Equipped'); ?></div>
 									<div class="clear"></div>
 								</td>
 								<td>
-									<div class="tleft"><?php pll_e('Bathroom'); ?></div>
-									<div class="tright"><i class="fa fa-bath"></i></i> <?php echo $re_bathroom; ?></div>
+									<div class="tleft"><img src="<?php bloginfo('template_url') ?>/assets/images/balcony.png" title="Balcony" class="icon-balcony"></div>
+									<div class="tright"><?php echo $re_balcony; ?></div>
 									<div class="clear"></div>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<div class="tleft"><?php pll_e('Living area'); ?></div>
-									<div class="tright"><i class="fa fa-expand"></i> <?php echo $re_area; ?> <span>m<sup>2</sup></span></div>
+									<div class="tleft"><i class="fa fa-expand"></i></div>
+									<div class="tright"><?php echo $re_area; ?> <span>m<sup>2</sup></span></div>
 									<div class="clear"></div>
 								</td>
 								<td>
-									<div class="tleft"><?php pll_e('Built in'); ?></div>
-									<div class="tright"><i class="fa fa-calendar"> </i><?php echo $re_builtin; ?></div>
+									<div class="tleft"><img src="<?php bloginfo('template_url') ?>/assets/images/upstairs.png" title="Balcony"></div>
+									<div class="tright"><?php echo $re_floor; ?></div>
+									<div class="clear"></div>
+								</td>
+								<td>
+									<div class="tleft"><i class="fa fa-calendar"></i></div>
+									<div class="tright"><?php pll_e('Built in'); ?> <?php echo $re_builtin; ?></div>
 									<div class="clear"></div>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<div class="tleft"><?php pll_e('Furnished'); ?></div>
-									<div class="tright"><i class="fa fa-object-group"></i> <?php echo $re_furnished; ?></div>
+									<div class="tleft"><i class="fa fa-bed"></i></div>
+									<div class="tright"><?php echo $re_bedroom; ?> <?php pll_e('Bedroom'); ?></div>
 									<div class="clear"></div>
 								</td>
 								<td>
-									<div class="tleft"><?php pll_e('Equipped'); ?></div>
-									<div class="tright"><i class="fa fa-object-group"></i> <?php echo $re_equipped; ?></div>
+									<div class="tleft"><i class="fa fa-bath"></i></div>
+									<div class="tright"><?php echo $re_bathroom; ?> <?php pll_e('Bathroom'); ?></div>
+									<div class="clear"></div>
+								</td>
+								<td>
+									<div class="tleft"><i class="fa fa-bath"></i> <i class="fa fa-shower"></i></div>
+									<div class="tright"><?php echo $re_bathroom_type; ?></div>
 									<div class="clear"></div>
 								</td>
 							</tr>
@@ -121,6 +129,12 @@
 								<th><?php pll_e('Furniture') ?></th>
 								<td><?php echo $re_furniture ?></td>
 							</tr>
+							<?php if(!empty($re_kitchen)) { ?>
+							<tr>
+								<th><?php pll_e('Kitchen') ?></th>
+								<td><?php echo $re_kitchen ?></td>
+							</tr>
+							<?php } ?>
 							<tr>
 								<th><?php pll_e('Equipment') ?></th>
 								<td><?php echo $re_equipment ?></td>
@@ -132,6 +146,10 @@
 						</tbody>
 					</table>
 				</div><!-- .tbl-services -->
+
+				<div class="property-content">
+					<?php the_content(); ?>
+				</div><!-- !property-content -->
 			</div><!-- .property-details -->
 		</div>
 

@@ -98,7 +98,7 @@ ul.bxslider {
 
 .bx-wrapper .bx-next {
     right: 10px;
-    background: url(images/controls.png) -43px -32px no-repeat
+    background: url(../images/controls.png) -43px -32px no-repeat
 }
 
 .bx-wrapper .bx-next:focus,

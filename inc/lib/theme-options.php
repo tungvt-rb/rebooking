@@ -313,7 +313,7 @@ function custom_theme_options() {
 							'label'		=> __( 'Garden', 'text-domain' ),
 						),
 						array(
-							'value'		=> 'GardenBalcony',
+							'value'		=> 'Garden & Balcony',
 							'label'		=> __( 'Garden & Balcony', 'text-domain' ),
 						),
 					)

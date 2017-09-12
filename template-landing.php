@@ -54,7 +54,7 @@ get_header();
 				} else {
 					echo "<div class='full-width'><h4 style='font-weight:500;'>";
 					pll_e("No post found!");
-					echo "</h4></li>";
+					echo "</h4></div>";
 				}
 			?>
 		</div>

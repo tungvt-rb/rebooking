@@ -107,8 +107,27 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 .widget-block {background:#fff;padding:10px 15px;border:1px solid #c0c0c0;}
 
-.property-details h3 {font-size:26px;font-weight:500;text-align:center;margin-bottom:15px;line-height:40px;}
-.property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;margin-bottom:15px;}
+.property-details {display:grid;}
+.property-details h3 {font-size:26px;font-weight:500;text-align:center;margin-bottom:10px;line-height:40px;}
+.property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;}
+
+.contact-bl {padding:5px;border:1px solid #c0c0c0;}
+.contact-bl-person {}
+.contact-bl-person img {float:left;border:1px solid #2c83a3;margin-right:10px;}
+.contact-bl-person .person-details {}
+.contact-bl-person .person-details span {display:block;}
+.contact-bl-person .person-details span i {width:18px;text-align:center;}
+.contact-bl-person .person-details span.p-name {font-weight:500;color:#000;}
+.contact-bl-person .person-details span.p-name i {font-size:16px;color:#48aacf;}
+.contact-bl-person .person-details span.p-mobile {font-weight:500;}
+.contact-bl-person .person-details span.p-mobile i {font-size:26px;line-height:25px;vertical-align:middle;color:#48cfad;}
+.contact-bl-person .person-details span.p-mail i {font-size:14px;color:#00a8ec;}
+.contact-bl-person .person-details span.p-mail a {text-decoration:underline;}
+.contact-bl-person .person-details span.p-companies ul {display:table;font-size:13px;}
+.contact-bl-person .person-details span.p-companies ul li {display:inline-block;font-weight:500;}
+.contact-bl-person .person-details span.p-companies ul li:after {content:"-";padding:0 5px;}
+.contact-bl-person .person-details span.p-companies ul li:first-child:after, .contact-bl-person .person-details span.p-companies ul li:last-child:after {content:"";padding:0;}
+.contact-bl-person .person-details span.p-companies i {font-size:15px;color:#f66428;margin-right:5px}
 
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}
@@ -146,7 +165,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tbl .view-detail {font-weight:500;color:#b32f1d;}
 .tbl .view-detail:hover {color:#de5744;}
 
-.tbl-details {padding:5px;background:#fff;border:1px solid #c0c0c0;margin-bottom:15px;}
+.tbl-details {padding:5px;background:#fff;border:1px solid #c0c0c0;}
 .tbl-details table {width:100%;}
 .tbl-details .tbl td {width:33.333333%;border-right:1px solid #fff;font-size:13px;font-weight:500;}
 .tbl-details .tbl tr td:last-child {border-right:none;}
@@ -154,7 +173,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tbl-details .tbl td .tleft img {float:left;}
 .tbl-details .tbl td .tleft img.icon-balcony {margin-left:-3px;}
 
-.tbl-services {padding:5px;margin-bottom:15px;background:#fff;border:1px solid #c0c0c0;}
+.tbl-services {padding:5px;background:#fff;border:1px solid #c0c0c0;}
 .tbl-services table {width:100%;border:1px solid #2c83a3;font-size:14px;}
 .tbl-services table th {color:#296dba;width:150px;background:#89d4ef;padding:5px 10px;font-weight:500;border-right:1px solid #2c83a3;border-bottom:1px solid #2c83a3;}
 .tbl-services table td {padding:5px 10px;border-bottom:1px solid #2c83a3;line-height:26px;}
@@ -306,6 +325,7 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 .no-full {width:33.33333% !important;}
 .no-pl {padding-left:0 !important;}
 .no-pr {padding-right:0 !important;}
+.mrg-btm {margin-bottom:10px;}
 
 /* ======================= Reponsive ======================= */
 @media screen and (min-width:480px) {

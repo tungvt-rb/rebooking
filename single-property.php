@@ -13,6 +13,7 @@
 			$re_kitchen				= get_post_meta( get_the_ID(), 'property_kitchen', true );
 			$re_details				= get_post_meta( get_the_ID(), 'property_details', true );
 			$re_balcony				= get_post_meta( get_the_ID(), 'property_balcony', true );
+			$re_contact_person		= get_post_meta( get_the_ID(), 'property_contact_person', true );
 			$re_gallery				= get_post_meta( get_the_ID(), 'property_gallery', true );
 			$re_gallery_img_ids		= wp_parse_id_list( $re_gallery );
 
@@ -48,11 +49,12 @@
 				</li>
 				<?php endforeach; ?>
 			</ul>
+			<div class="clear"></div>
 
 			<div class="property-details">
 				<h3><?php pll_e('Details of apartment for rent') ?></h3>
 
-				<div class="tbl-details">
+				<div class="tbl-details mrg-btm">
 					<table class="tbl">
 						<tbody>
 							<tr>
@@ -110,7 +112,7 @@
 					</table>
 				</div><!-- .tbl-details -->
 
-				<div class="tbl-services">
+				<div class="tbl-services mrg-btm">
 					<table>
 						<tbody>
 							<tr>
@@ -147,17 +149,80 @@
 					</table>
 				</div><!-- .tbl-services -->
 
-				<div class="property-content">
+				<div class="property-content mrg-btm">
 					<?php the_content(); ?>
 				</div><!-- !property-content -->
+
+				<div class="contact-bl mrg-btm">
+					<div class="one-half no-pad">
+						<?php
+							if( !empty($re_contact_person) ) {
+								$args = array(
+									'post_type' => 'businessman',
+									'p'		=> $re_contact_person,
+								);
+
+								$query = new WP_Query($args);
+
+								if( $query->have_posts() ) {
+									while( $query->have_posts() ) : $query->the_post();
+										$featured_image 		= aq_resize( wp_get_attachment_url( get_post_thumbnail_id($post->ID) ,'full') , 100, 100, true );
+										$bm_mobile				= get_post_meta(get_the_ID(), 'businessman_mobile', true);
+										$bm_email				= get_post_meta(get_the_ID(), 'businessman_email', true);
+										$bm_notes				= get_post_meta(get_the_ID(), 'businessman_notes', true);
+
+										$terms = wp_get_post_terms($post->ID, 'businessman-category');
+						?>
+						<div class="contact-bl-person">
+							<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
+							<div class="person-details">
+								<span class="p-name"><i class="fa fa-user-circle-o"></i> <?php echo $post->post_title ?> (<?php echo $bm_notes ?>)</span>
+								<span class="p-mobile"><i class="fa fa-mobile"></i> <?php echo $bm_mobile ?></span>
+								<span class="p-mail"><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $bm_email ?>"><?php echo $bm_email ?></a></span>
+								<span class="p-companies">
+									<ul>
+										<li><i class="fa fa-id-card-o"></i></li>
+									<?php										
+										if( !empty($terms) ) {
+											foreach ($terms as $term => $value) {
+												echo '<li>' . $value->name . '</li>';
+											}
+										} else {
+											echo '<li>';
+											pll_e('No company selected!');
+											echo '</li>';
+										}
+									?>
+									</ul>
+								</span>
+							</div><!-- .person-details -->
+						</div><!-- .contact-bl-person -->
+						<?php 
+									endwhile;
+								} else {
+									pll_e('No post found!');
+								}
+							} else {
+								pll_e('No contact!');
+							}
+
+							wp_reset_query(); 
+						?>
+					</div>
+					<div class="one-half">
+						<p>Social Links!!!</p>
+					</div>
+					<div class="clear"></div>
+				</div>
 			</div><!-- .property-details -->
 		</div>
 
 		<div class="one-third">
-			<div class="widget-block">
+			<div class="widget-block mrg-btm">
 				<?php dynamic_sidebar( 'default-sidebar' ); ?>
 			</div>
 		</div>
+		<div class="clear"></div>
 	</div>
 </div><!-- .wrapper -->
 

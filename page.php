@@ -20,7 +20,6 @@
 			</div>
 		</div><!-- .wrapper -->
 		
-		
 	<?php endwhile; ?>
 <?php endif; ?>
 

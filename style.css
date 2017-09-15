@@ -114,7 +114,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .contact-bl {padding:5px;border:1px solid #c0c0c0;}
 .contact-bl-person {}
 .contact-bl-person img {float:left;border:1px solid #2c83a3;margin-right:10px;}
-.contact-bl-person .person-details {}
+.contact-bl-person .person-details {font-size:13px;}
 .contact-bl-person .person-details span {display:block;}
 .contact-bl-person .person-details span i {width:18px;text-align:center;}
 .contact-bl-person .person-details span.p-name {font-weight:500;color:#000;}

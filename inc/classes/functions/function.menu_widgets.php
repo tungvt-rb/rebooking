@@ -26,3 +26,6 @@ register_sidebar(array(
 	'before_title' => '<h3 class="title">',
 	'after_title' => '</h3>',
 ));
+
+//register widgets
+require_once ( TEMPLATEPATH . '/inc/classes/functions/widgets/widget.show_businessman.php' );

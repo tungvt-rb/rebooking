@@ -10,6 +10,12 @@
 		}
 	?>
 
+	<?php
+		$currentLanguage  = get_bloginfo('language');
+		if($currentLanguage == 'en-US') $currentLanguage = 'en';
+		if($currentLanguage == 'vi') $currentLanguage = 'vn'
+	?>
+
 	<title><?php echo ($title != '') ? $title .' - ' . get_bloginfo( 'name' ) : get_bloginfo( 'name' ) ?></title>
 	
 	<meta name="description" content="">
@@ -24,7 +30,7 @@
 	<?php wp_head(); ?>
 	
 </head>
-<body>
+<body class="<?php echo $currentLanguage; ?>">
 
 	<div class="wrapper">
 		<div class="top-head">

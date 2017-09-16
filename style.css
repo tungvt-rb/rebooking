@@ -105,6 +105,30 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .head-info {padding:5px 0;}
 .head-info img {width:100%;}
 
+.widget-block {background:#fff;padding:10px 15px;border:1px solid #c0c0c0;}
+
+.property-details {display:grid;}
+.property-details h3 {font-size:26px;font-weight:500;text-align:center;margin-bottom:10px;line-height:40px;}
+.property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;}
+
+.contact-bl {padding:5px;border:1px solid #c0c0c0;}
+.contact-bl-person {}
+.contact-bl-person img {float:left;border:1px solid #2c83a3;margin-right:10px;}
+.contact-bl-person .person-details {font-size:13px;}
+.contact-bl-person .person-details span {display:block;}
+.contact-bl-person .person-details span i {width:18px;text-align:center;}
+.contact-bl-person .person-details span.p-name {font-weight:500;color:#000;}
+.contact-bl-person .person-details span.p-name i {font-size:16px;color:#48aacf;}
+.contact-bl-person .person-details span.p-mobile {font-weight:500;}
+.contact-bl-person .person-details span.p-mobile i {font-size:26px;line-height:25px;vertical-align:middle;color:#48cfad;}
+.contact-bl-person .person-details span.p-mail i {font-size:14px;color:#00a8ec;}
+.contact-bl-person .person-details span.p-mail a {text-decoration:underline;}
+.contact-bl-person .person-details span.p-companies ul {display:table;font-size:13px;}
+.contact-bl-person .person-details span.p-companies ul li {display:inline-block;font-weight:500;}
+.contact-bl-person .person-details span.p-companies ul li:after {content:"-";padding:0 5px;}
+.contact-bl-person .person-details span.p-companies ul li:first-child:after, .contact-bl-person .person-details span.p-companies ul li:last-child:after {content:"";padding:0;}
+.contact-bl-person .person-details span.p-companies i {font-size:15px;color:#f66428;margin-right:5px}
+
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}
 .re-catname {background:#2f2724;margin:3px 3px 10px 3px;text-transform:uppercase;padding:0 10px;border-top-left-radius:5px;border-top-right-radius:5px;font-size:15px;}
@@ -125,7 +149,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .item-info .tbl {width:100%;border-left:none;}
 .item-info .tbl th {border-top:none;}
 
-/* TABLE HOVER */
+/* TABLE STYLE */
 .tbl {border:1px solid #2c83a3;line-height:18px;}
 .tbl th {font-size:13px;font-weight:500;text-align:center;background:#59c7ef;border-top:4px solid #2c83a3;
     border-bottom:1px solid #fff;color:#039;padding:8px;
@@ -140,6 +164,20 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tbl td .tleft span {float:right;color:#000;}
 .tbl .view-detail {font-weight:500;color:#b32f1d;}
 .tbl .view-detail:hover {color:#de5744;}
+
+.tbl-details {padding:5px;background:#fff;border:1px solid #c0c0c0;}
+.tbl-details table {width:100%;}
+.tbl-details .tbl td {width:33.333333%;border-right:1px solid #fff;font-size:13px;font-weight:500;}
+.tbl-details .tbl tr td:last-child {border-right:none;}
+.tbl-details .tbl td .tleft {background:#e8edff;color:#000;}
+.tbl-details .tbl td .tleft img {float:left;}
+.tbl-details .tbl td .tleft img.icon-balcony {margin-left:-3px;}
+
+.tbl-services {padding:5px;background:#fff;border:1px solid #c0c0c0;}
+.tbl-services table {width:100%;border:1px solid #2c83a3;font-size:14px;}
+.tbl-services table th {color:#296dba;width:150px;background:#89d4ef;padding:5px 10px;font-weight:500;border-right:1px solid #2c83a3;border-bottom:1px solid #2c83a3;}
+.tbl-services table td {padding:5px 10px;border-bottom:1px solid #2c83a3;line-height:26px;}
+.tbl-services table tr:last-child td, .tbl-services table tr:last-child th {border-bottom:none;}
 
 /* TOOLTIP */
 .tooltip {position:relative;}
@@ -159,6 +197,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .breadcrumbs li a {display:block;padding:5px 20px 5px 30px;background:#b32f1d;color:#fff;text-transform:uppercase;border-radius:0 100px 100px 0;position:relative;box-shadow:0 0 20px rgba(0,0,0,0.4);}
 .breadcrumbs li a:hover {}
 .breadcrumbs li.current {background:#dce4d5;padding:5px 20px 5px 25px;border-radius:0 100px 100px 0;}
+
 /* THUMB */
 .thumb {display:block;position:relative;overflow:hidden;border:2px solid #2c83a3;margin-bottom:10px;}
 .thumb img {width:100%;height:auto;
@@ -286,6 +325,7 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 .no-full {width:33.33333% !important;}
 .no-pl {padding-left:0 !important;}
 .no-pr {padding-right:0 !important;}
+.mrg-btm {margin-bottom:10px;}
 
 /* ======================= Reponsive ======================= */
 @media screen and (min-width:480px) {

@@ -9,7 +9,7 @@ get_header();
 <div class="wrapper">
 	<div class="property-list">
 		<div class="g-row">
-			<div class="full-width"><h2 class="p-title"><?php pll_e('PROPERTY LIST') ?></h2></div>
+			<div class="full-width"><h2 class="p-title"><?php pll_e('PROPERTY LISTS') ?></h2></div>
 			<div class="clear"></div>
 			
 			<?php

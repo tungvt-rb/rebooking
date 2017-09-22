@@ -153,7 +153,7 @@
 					<?php the_content(); ?>
 				</div><!-- !property-content -->
 
-				<div class="contact-bl mrg-btm">
+				<div class="contact-bl">
 					<div class="one-half no-pad">
 						<?php
 							if( !empty($re_contact_person) ) {

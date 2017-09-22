@@ -107,11 +107,11 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 .widget-block {background:#fff;padding:10px 15px;border:1px solid #c0c0c0;}
 
-.property-details {display:grid;}
+.property-details {display:grid;background:#dce4d5;padding:10px;margin-bottom:10px;border:1px solid #c0c0c0;}
 .property-details h3 {font-size:26px;font-weight:500;text-align:center;margin-bottom:10px;line-height:40px;}
 .property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;}
 
-.contact-bl {padding:5px;border:1px solid #c0c0c0;}
+.contact-bl {padding:5px;border:1px solid #c0c0c0;background:#fff;}
 .contact-bl-person {}
 .contact-bl-person img {float:left;border:1px solid #2c83a3;margin-right:10px;}
 .contact-bl-person .person-details {font-size:13px;}
@@ -165,18 +165,18 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .tbl .view-detail {font-weight:500;color:#b32f1d;}
 .tbl .view-detail:hover {color:#de5744;}
 
-.tbl-details {padding:5px;background:#fff;border:1px solid #c0c0c0;}
-.tbl-details table {width:100%;}
+.tbl-details {background:#fff;border:1px solid #c0c0c0;}
+.tbl-details table {width:100%;border:0;}
 .tbl-details .tbl td {width:33.333333%;border-right:1px solid #fff;font-size:13px;font-weight:500;}
 .tbl-details .tbl tr td:last-child {border-right:none;}
 .tbl-details .tbl td .tleft {background:#e8edff;color:#000;}
 .tbl-details .tbl td .tleft img {float:left;}
 .tbl-details .tbl td .tleft img.icon-balcony {margin-left:-3px;}
 
-.tbl-services {padding:5px;background:#fff;border:1px solid #c0c0c0;}
-.tbl-services table {width:100%;border:1px solid #2c83a3;font-size:14px;}
-.tbl-services table th {color:#296dba;width:150px;background:#89d4ef;padding:5px 10px;font-weight:500;border-right:1px solid #2c83a3;border-bottom:1px solid #2c83a3;}
-.tbl-services table td {padding:5px 10px;border-bottom:1px solid #2c83a3;line-height:26px;}
+.tbl-services {background:#fff;border:1px solid #c0c0c0;}
+.tbl-services table {width:100%;font-size:14px;}
+.tbl-services table th {width:150px;background:#e8edff;padding:5px 10px;font-weight:500;border-right:1px solid #c0c0c0;border-bottom:1px solid #c0c0c0;}
+.tbl-services table td {padding:5px 10px;border-bottom:1px solid #c0c0c0;line-height:26px;}
 .tbl-services table tr:last-child td, .tbl-services table tr:last-child th {border-bottom:none;}
 
 /* TOOLTIP */

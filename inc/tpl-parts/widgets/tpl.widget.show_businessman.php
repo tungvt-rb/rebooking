@@ -7,7 +7,7 @@
 		<span class="p-companies">
 			<ul>
 				<li><i class="fa fa-id-card-o"></i></li>
-			<?php										
+			<?php
 				if( !empty($terms) ) {
 					foreach ($terms as $term => $value) {
 						echo '<li>' . $value->name . '</li>';

@@ -42,7 +42,7 @@ get_header();
 						<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
 						<span class="fa fa-search thumb-overlay"></span>
 					</a>
-					<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tpl.table_hover.php' ); ?>
+					<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.home.hover.php' ); ?>
 				</div>
 				
 				<?php } ?>
@@ -125,7 +125,7 @@ get_header();
 							<h4 class="tooltip">
 								<i class="fa fa-bookmark"></i>
 								<a href="<?php the_permalink(); ?>"><?php echo mb_strimwidth($post->post_title, 0, 50, '...') ?></a>
-								<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tpl.table_hover.php' ); ?>
+								<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.home.hover.php' ); ?>
 							</h4>
 						</li>
 							

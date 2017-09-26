@@ -35,7 +35,7 @@
 				</div><!-- .item-thumb -->
 				<?php } ?>
 				<div class="item-info">
-					<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tpl.table_result.php' ); ?>
+					<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.search.result.php' ); ?>
 				</div><!-- .item-info -->
 				<div class="clear"></div>
 			</div>

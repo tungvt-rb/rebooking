@@ -17,6 +17,13 @@ pll_register_string('Environment', 'Environment', 'property_details');
 pll_register_string('Furniture', 'Furniture', 'property_details');
 pll_register_string('Details', 'Details', 'property_details');
 
+pll_register_string('Label H3(details header) in single property', 'Details of apartment for rent', 'property_details');
+pll_register_string('Label "Property ID" in single property', 'Property ID', 'property_details');
+pll_register_string('Label after property ID in single property', 'Please use this', 'property_details');
+pll_register_string('$/month', 'month', 'property_details');
+
+pll_register_string('Label in google map', 'PROPERTY LOCATION', 'property_details');
+
 pll_register_string('Page title', 'SEARCH BY TYPE & LOCATION', 'page_content');
 pll_register_string('Message info', 'No post found!', 'page_content');
 pll_register_string('Message info', 'No contact!', 'page_content');

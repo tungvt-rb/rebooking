@@ -17,14 +17,14 @@
 			$re_gallery				= get_post_meta( get_the_ID(), 'property_gallery', true );
 			$re_gallery_img_ids		= wp_parse_id_list( $re_gallery );
 
+			$re_address				= get_post_meta(get_the_ID(), 'property_address', true);
+
 			$re_price 				= get_post_meta(get_the_ID(), 'property_price', true);
 			$re_area 				= get_post_meta(get_the_ID(), 'property_area', true);
 			$re_builtin 			= get_post_meta(get_the_ID(), 'property_builtin', true);
 			$re_bedroom				= get_post_meta(get_the_ID(), 'property_bedroom', true);
 			$re_bathroom			= get_post_meta(get_the_ID(), 'property_bathroom', true);
 			$re_bathroom_type		= get_post_meta(get_the_ID(), 'property_bathroom_type', true);
-			$re_location			= get_post_meta(get_the_ID(), 'property_location', true);
-			$re_includeof			= get_post_meta(get_the_ID(), 'property_kitchen', true);
 			$re_furnished			= get_post_meta(get_the_ID(), 'property_furnished', true);
 			$re_equipped			= get_post_meta(get_the_ID(), 'property_equipped', true);
 			$re_floor				= get_post_meta(get_the_ID(), 'property_floor', true);
@@ -38,21 +38,26 @@
 		<div class="clear"></div>
 
 		<div class="two-thirds">
+			<?php if ( $re_gallery ) { ?>
 			<ul class="bxslider">
 				<?php
 					foreach ( $re_gallery_img_ids as $key=>$value ) :
 						$img_title_alt	= get_the_excerpt($value);
 						$img_url		= wp_get_attachment_image_src($value, 'full');
 				?>
-				<li>
-					<img src="<?php echo $img_url[0] ?>" title="<?php echo $img_title_alt ?>" alt="<?php echo $img_title_alt ?>">
-				</li>
+				<li><img src="<?php echo $img_url[0] ?>" title="<?php echo $img_title_alt ?>" alt="<?php echo $img_title_alt ?>"></li>
 				<?php endforeach; ?>
 			</ul>
+			<?php } ?>
 			<div class="clear"></div>
 
 			<div class="property-details">
-				<h3><?php pll_e('Details of apartment for rent') ?></h3>
+				<div class="details-header">
+					<h3><?php pll_e('Details of apartment for rent') ?></h3>
+					<span class="property-id"><?php pll_e('Property ID'); echo ': ';?><span class="id-info"><?php echo get_the_ID(); ?></span> (<?php pll_e('Please use this'); ?>)</span>
+					<span class="property-price"><?php pll_e('Price'); echo ': '; ?><span class="price-info"><?php pll_e('$'); echo $re_price . '/'; pll_e('month'); ?></span></span>
+					<div class="clear"></div>
+				</div><!-- .property-details-head -->				
 
 				<div class="tbl-details mrg-btm">
 					<table class="tbl">
@@ -152,6 +157,10 @@
 				<div class="property-content mrg-btm">
 					<?php the_content(); ?>
 				</div><!-- !property-content -->
+
+				<div class="property-map mrg-btm">
+					<?php require( TEMPLATEPATH . '/inc/tpl-parts/tpl.map.php' ); ?>
+				</div><!-- .property-map -->
 
 				<div class="contact-bl">
 					<div class="one-half no-pad">

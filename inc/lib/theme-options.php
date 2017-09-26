@@ -374,7 +374,21 @@ function custom_theme_options() {
 						),
 					)
 				),
-
+			),
+		),
+		array(
+			'id'			=> 'property_google_map',
+			'title'			=> 'Property address',
+			'pages'			=> array('property'),
+			'context'		=> 'normal',
+			'priority'		=> 'core',
+			'fields'		=> array(
+				array(
+					'id'			=> 'property_address',
+					'label'			=> __( 'Address', 'text-domain' ),
+					'desc'			=> __( 'Enter address to show google maps', 'text-domain' ),
+					'type'			=> 'text',
+				),
 			),
 		),
 		array(

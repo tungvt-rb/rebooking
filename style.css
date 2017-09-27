@@ -105,7 +105,9 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .head-info {padding:5px 0;}
 .head-info img {width:100%;}
 
-.widget-block {background:#fff;padding:10px 15px;border:1px solid #c0c0c0;}
+.widget {background:#fff;padding:10px 8px;border:1px solid #c0c0c0;}
+.widget h3.title {text-align:center;color:#b32f1d;font-weight:500;font-size:20px;text-transform:uppercase;margin-bottom:15px;padding:6px 0;}
+.widget .person-details {margin-bottom:6px;}
 
 .property-details {background:#dce4d5;padding:10px;margin-bottom:10px;border:1px solid #c0c0c0;}
 .property-details h3 {font-size:26px;font-weight:500;text-align:left;line-height:45px;}

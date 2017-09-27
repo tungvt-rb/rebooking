@@ -30,4 +30,6 @@ pll_register_string('Message info', 'No contact!', 'page_content');
 pll_register_string('Message info', 'No company selected!', 'page_content');
 pll_register_string('PROPERTY LIST', 'PROPERTY LIST', 'page_content');
 
-pll_register_string('Label control', 'View detail', 'controls');
+pll_register_string('Label control (List property)', 'View detail', 'controls');
+pll_register_string('Label control (Search form)', 'Search', 'controls');
+

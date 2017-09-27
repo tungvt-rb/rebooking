@@ -154,7 +154,7 @@
 							<input type="text" value="<?php echo $_GET['max_price'] ?>" name="max_price" id="max_price" placeholder="<?php pll_e('Max Price') ?>" />
 						</div>
 						<div class="one-quarter">
-							<input type="text" value="<?php echo $_GET['s'] ?>" name="s" id="name" placeholder="<?php pll_e('Type the Price'); ?>" />
+							<input type="text" value="<?php echo $_GET['s'] ?>" name="s" id="name" placeholder="<?php pll_e('Keywords or ID'); ?>" />
 						</div>
 						<div class="one-quarter">
 							<input type="submit" id="searchsubmit" value="<?php pll_e('Search') ?>" class="btnSubmit" />

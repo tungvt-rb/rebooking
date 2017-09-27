@@ -227,7 +227,7 @@
 		</div>
 
 		<div class="one-third">
-			<div class="widget-block mrg-btm">
+			<div class="widget-block">
 				<?php dynamic_sidebar( 'default-sidebar' ); ?>
 			</div>
 		</div>

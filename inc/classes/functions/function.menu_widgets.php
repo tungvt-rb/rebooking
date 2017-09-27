@@ -21,7 +21,7 @@ register_sidebar(array(
 register_sidebar(array(
 	'name' => 'Default Sidebar',
 	'id' => 'default-sidebar',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'before_widget' => '<div id="%1$s" class="widget mrg-btm %2$s">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="title">',
 	'after_title' => '</h3>',

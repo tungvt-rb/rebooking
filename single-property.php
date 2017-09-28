@@ -17,17 +17,17 @@
 			$re_gallery				= get_post_meta( get_the_ID(), 'property_gallery', true );
 			$re_gallery_img_ids		= wp_parse_id_list( $re_gallery );
 
-			$re_address				= get_post_meta(get_the_ID(), 'property_address', true);
+			$re_address				= get_post_meta( get_the_ID(), 'property_address', true );
 
-			$re_price 				= get_post_meta(get_the_ID(), 'property_price', true);
-			$re_area 				= get_post_meta(get_the_ID(), 'property_area', true);
-			$re_builtin 			= get_post_meta(get_the_ID(), 'property_builtin', true);
-			$re_bedroom				= get_post_meta(get_the_ID(), 'property_bedroom', true);
-			$re_bathroom			= get_post_meta(get_the_ID(), 'property_bathroom', true);
-			$re_bathroom_type		= get_post_meta(get_the_ID(), 'property_bathroom_type', true);
-			$re_furnished			= get_post_meta(get_the_ID(), 'property_furnished', true);
-			$re_equipped			= get_post_meta(get_the_ID(), 'property_equipped', true);
-			$re_floor				= get_post_meta(get_the_ID(), 'property_floor', true);
+			$re_price 				= get_post_meta( get_the_ID(), 'property_price', true );
+			$re_area 				= get_post_meta( get_the_ID(), 'property_area', true );
+			$re_builtin 			= get_post_meta( get_the_ID(), 'property_builtin', true );
+			$re_bedroom				= get_post_meta( get_the_ID(), 'property_bedroom', true );
+			$re_bathroom			= get_post_meta( get_the_ID(), 'property_bathroom', true );
+			$re_bathroom_type		= get_post_meta( get_the_ID(), 'property_bathroom_type', true );
+			$re_furnished			= get_post_meta( get_the_ID(), 'property_furnished', true );
+			$re_equipped			= get_post_meta( get_the_ID(), 'property_equipped', true );
+			$re_floor				= get_post_meta( get_the_ID(), 'property_floor', true );
 ?>
 
 <div class="wrapper content">
@@ -51,7 +51,7 @@
 			<?php } ?>
 			<div class="clear"></div>
 
-			<div class="property-details">
+			<div class="property-details mrg-btm">
 				<div class="details-header">
 					<h3><?php pll_e('Details of apartment for rent') ?></h3>
 					<span class="property-id"><?php pll_e('Property ID'); echo ': ';?><span class="id-info"><?php echo get_the_ID(); ?></span> (<?php pll_e('Please use this'); ?>)</span>
@@ -60,98 +60,11 @@
 				</div><!-- .property-details-head -->				
 
 				<div class="tbl-details mrg-btm">
-					<table class="tbl">
-						<tbody>
-							<tr>
-								<td>
-									<div class="tleft"><i class="fa fa-object-group"></i></div>
-									<div class="tright"><?php echo $re_furnished; ?> <?php pll_e('Furnished'); ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><i class="fa fa-object-group"></i></div>
-									<div class="tright"><?php echo $re_equipped; ?> <?php pll_e('Equipped'); ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><img src="<?php bloginfo('template_url') ?>/assets/images/balcony.png" title="Balcony" class="icon-balcony"></div>
-									<div class="tright"><?php echo $re_balcony; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="tleft"><i class="fa fa-expand"></i></div>
-									<div class="tright"><?php echo $re_area; ?> <span>m<sup>2</sup></span></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><img src="<?php bloginfo('template_url') ?>/assets/images/upstairs.png" title="Balcony"></div>
-									<div class="tright"><?php echo $re_floor; ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><i class="fa fa-calendar"></i></div>
-									<div class="tright"><?php pll_e('Built in'); ?> <?php echo $re_builtin; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="tleft"><i class="fa fa-bed"></i></div>
-									<div class="tright"><?php echo $re_bedroom; ?> <?php pll_e('Bedroom'); ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><i class="fa fa-bath"></i></div>
-									<div class="tright"><?php echo $re_bathroom; ?> <?php pll_e('Bathroom'); ?></div>
-									<div class="clear"></div>
-								</td>
-								<td>
-									<div class="tleft"><i class="fa fa-bath"></i> <i class="fa fa-shower"></i></div>
-									<div class="tright"><?php echo $re_bathroom_type; ?></div>
-									<div class="clear"></div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<?php require_once( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.single_property.details.php' ); ?>
 				</div><!-- .tbl-details -->
 
 				<div class="tbl-services mrg-btm">
-					<table>
-						<tbody>
-							<tr>
-								<th><?php pll_e('Free services') ?></th>
-								<td><?php echo $re_free_services; ?></td>
-							</tr>
-							<tr>
-								<th><?php pll_e('Pay Services') ?></th>
-								<td><?php echo $re_pay_services ?></td>
-							</tr>
-							<tr>
-								<th><?php pll_e('Environment') ?></th>
-								<td><?php echo $re_environment ?></td>
-							</tr>
-							<tr>
-								<th><?php pll_e('Furniture') ?></th>
-								<td><?php echo $re_furniture ?></td>
-							</tr>
-							<?php if(!empty($re_kitchen)) { ?>
-							<tr>
-								<th><?php pll_e('Kitchen') ?></th>
-								<td><?php echo $re_kitchen ?></td>
-							</tr>
-							<?php } ?>
-							<tr>
-								<th><?php pll_e('Equipment') ?></th>
-								<td><?php echo $re_equipment ?></td>
-							</tr>
-							<tr>
-								<th><?php pll_e('Details') ?></th>
-								<td><?php echo $re_details ?></td>
-							</tr>
-						</tbody>
-					</table>
+					<?php require_once( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.single_property.services.php' ); ?>
 				</div><!-- .tbl-services -->
 
 				<div class="property-content mrg-btm">
@@ -162,7 +75,7 @@
 					<?php require( TEMPLATEPATH . '/inc/tpl-parts/tpl.map.php' ); ?>
 				</div><!-- .property-map -->
 
-				<div class="contact-bl">
+				<div class="contact-bl mrg-btm">
 					<div class="one-half no-pad">
 						<?php
 							if( !empty($re_contact_person) ) {
@@ -222,8 +135,101 @@
 						<p>Social Links!!!</p>
 					</div>
 					<div class="clear"></div>
-				</div>
+				</div><!-- .contact-bl -->
+
+				<div class="form-contact">
+					<h3><?php pll_e('Request for showing') ?></h3>
+					<form class="form" method="post" action="<?php echo admin_url('admin-ajax.php');?>">
+						<div class="one-third">
+							<input type="text" name="full-name" placeholder="Full name">
+						</div>
+						<div class="one-third">
+							<input type="text" name="email" placeholder="Your email">
+						</div>
+						<div class="one-third">
+							<input type="text" name="phone" placeholder="Your phone">
+						</div>
+						<div class="clear"></div>
+
+						<div class="full-width">
+							<input type="text" name="property-title" value="<?php the_title(); ?>">
+						</div>
+						<div class="clear"></div>
+
+						<div class="full-width">
+							<textarea placeholder="Your comment"></textarea>
+						</div>
+						<div class="clear"></div>
+
+						<div class="one-third">
+							<input type="text" name="secure-code" placeholder="Secure code">
+						</div>
+						<div class="one-third">
+
+						</div>
+						<div class="one-third">
+							<input type="submit" name="submit" value="Send" class="btnSubmit">
+						</div>
+						<div class="clear"></div>
+					</form>
+				</div><!-- .form-contact -->
 			</div><!-- .property-details -->
+
+			<div class="related-properties">
+				<h3>Related properties</h3>
+				<?php 
+					$custom_taxterms = wp_get_object_terms( $post->ID, 'property-category', array('fields' => 'ids') );
+					
+					$args = array(
+						'post_type' => 'property',
+						'post_status' => 'publish',
+						'posts_per_page' => 6,
+						'orderby' => 'rand',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'property-category',
+								'field' => 'id',
+								'terms' => $custom_taxterms
+							)
+						),
+						'post__not_in' => array ($post->ID),
+					);
+					$related_items = new WP_Query( $args );
+					
+					if ($related_items->have_posts()) :
+						while ( $related_items->have_posts() ) : $related_items->the_post();
+							$featured_image = aq_resize( wp_get_attachment_url( get_post_thumbnail_id() ,'full') , 300, 280, true );
+
+							$re_price 			= get_post_meta( get_the_ID(), 'property_price', true );
+							$re_area 			= get_post_meta( get_the_ID(), 'property_area', true );
+							$re_builtin 		= get_post_meta( get_the_ID(), 'property_builtin', true );
+							$re_bedroom			= get_post_meta( get_the_ID(), 'property_bedroom', true );
+							$re_bathroom		= get_post_meta( get_the_ID(), 'property_bathroom', true );
+							$re_bathroom_type	= get_post_meta( get_the_ID(), 'property_bathroom_type', true );
+							$re_location		= get_post_meta( get_the_ID(), 'property_location', true );
+							$re_includeof		= get_post_meta( get_the_ID(), 'property_kitchen', true );
+				?>
+							<div class="property-item">
+								<?php if( has_post_thumbnail() ) { ?>
+								<div class="item-thumb">
+									<a class="thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+										<img src="<?php echo $featured_image; ?>" alt="<?php the_title(); ?>">
+										<span class="fa fa-search thumb-overlay"></span>
+									</a>
+								</div><!-- .item-thumb -->
+								<?php } ?>
+								<div class="item-info">
+									<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.search.result.php' ); ?>
+								</div><!-- .item-info -->
+								<div class="clear"></div>
+							</div>
+				<?php
+						endwhile;
+					endif;
+					
+					wp_reset_postdata();
+				?>
+			</div><!-- .related-properties -->
 		</div>
 
 		<div class="one-third">

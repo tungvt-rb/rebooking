@@ -138,6 +138,11 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .contact-bl-person .person-details span.p-companies ul li:first-child:after, .contact-bl-person .person-details span.p-companies ul li:last-child:after {content:"";padding:0;}
 .contact-bl-person .person-details span.p-companies i {font-size:15px;color:#f66428;margin-right:5px}
 
+.form-contact {background:#fafafa;padding:5px;border:1px solid #c0c0c0;}
+.form-contact h3 {padding:0 5px;text-transform:uppercase;margin-bottom:6px;}
+
+.related-properties {padding:5px;background:#dce4d5;border:1px solid #c0c0c0;}
+
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}
 .re-catname {background:#2f2724;margin:3px 3px 10px 3px;text-transform:uppercase;padding:0 10px;border-top-left-radius:5px;border-top-right-radius:5px;font-size:15px;}
@@ -151,7 +156,8 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 .property-list {border-left:1px solid #dedede;border-right:1px solid #dedede;border-bottom:1px solid #dedede;padding:15px 0;}
 
-.property-item {background:#dce4d5;border:1px solid #c0c0c0;padding:5px;margin-bottom:10px;}
+.search-results {padding:5px;background:#dce4d5;border:1px solid #c0c0c0;}
+.property-item {margin-bottom:8px;}
 .item-thumb {float:left;width:163px;border:1px solid #2c83a3;}
 .item-thumb .thumb {border:none;margin-bottom:0;}
 .item-info {float:right;width:100%;}
@@ -262,17 +268,18 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-input:not([type="checkbox"]), .slb {
+textarea {resize:none;height:80px;font-family:'Roboto', sans-serif;}
+input:not([type="checkbox"]), .slb, textarea {
     border:1px solid #e1e1e1;font-size:15px;padding:6px 10px;line-height:20px;color:#4e4f4b;margin-bottom:10px;width:100%;
 }
-input:not([type="checkbox"]):focus, .slb:focus {border-color:#222;outline:0;
+input:not([type="checkbox"]):focus, .slb:focus, textarea:focus {border-color:#222;outline:0;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-input:not([type="checkbox"]):hover, .slb:hover {border-color:#2f2724;
+input:not([type="checkbox"]):hover, .slb:hover, textarea:hover {border-color:#2f2724;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;

@@ -110,7 +110,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .widget .person-details {margin-bottom:6px;}
 
 .property-details {background:#dce4d5;padding:10px;margin-bottom:10px;border:1px solid #c0c0c0;}
-.property-details h3 {font-size:26px;font-weight:500;text-align:left;line-height:45px;}
+.property-details h3, .related-properties h3 {font-size:26px;font-weight:500;text-align:left;line-height:45px;}
 .details-header {position:relative;margin-bottom:5px;}
 .details-header .property-id, .details-header .property-price {position:relative;right:10px;font-size:14px;font-weight:500;line-height:20px;display:block;}
 .details-header .property-id {top:0;float:left;left:0;}
@@ -142,6 +142,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .form-contact h3 {padding:0 5px;text-transform:uppercase;margin-bottom:6px;}
 
 .related-properties {padding:5px;background:#dce4d5;border:1px solid #c0c0c0;}
+
 
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}
@@ -213,6 +214,18 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .breadcrumbs li a {display:block;padding:5px 20px 5px 30px;background:#b32f1d;color:#fff;text-transform:uppercase;border-radius:0 100px 100px 0;position:relative;box-shadow:0 0 20px rgba(0,0,0,0.4);}
 .breadcrumbs li a:hover {}
 .breadcrumbs li.current {background:#dce4d5;padding:5px 20px 5px 25px;border-radius:0 100px 100px 0;}
+
+/* PAGINATION */
+.pagination {font-size:15px;text-align:center;width:100%;margin:0 auto 50px;display:table;}
+.pagination .page-number {border:1px solid #000;padding:0 10px;text-decoration:none;background:#b32f1d;color:#fff;margin:0 2px;display:inline-block;}
+.pagination a:hover {color:#fff;background:#e83e26;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.pagination span.current-page {border:1px solid #c1c1c1;background:#eee;color:#000;}
 
 /* THUMB */
 .thumb {display:block;position:relative;overflow:hidden;border:2px solid #2c83a3;margin-bottom:10px;}

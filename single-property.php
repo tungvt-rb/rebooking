@@ -80,8 +80,8 @@
 						<?php
 							if( !empty($re_contact_person) ) {
 								$args = array(
-									'post_type' => 'businessman',
-									'p'		=> $re_contact_person,
+									'post_type' 	=> 'businessman',
+									'p'				=> $re_contact_person,
 								);
 
 								$query = new WP_Query($args);
@@ -89,9 +89,9 @@
 								if( $query->have_posts() ) {
 									while( $query->have_posts() ) : $query->the_post();
 										$featured_image 		= aq_resize( wp_get_attachment_url( get_post_thumbnail_id($post->ID) ,'full') , 100, 100, true );
-										$bm_mobile				= get_post_meta(get_the_ID(), 'businessman_mobile', true);
-										$bm_email				= get_post_meta(get_the_ID(), 'businessman_email', true);
-										$bm_notes				= get_post_meta(get_the_ID(), 'businessman_notes', true);
+										$bm_mobile				= get_post_meta( get_the_ID(), 'businessman_mobile', true );
+										$bm_email				= get_post_meta( get_the_ID(), 'businessman_email', true );
+										$bm_notes				= get_post_meta( get_the_ID(), 'businessman_notes', true );
 
 										$terms = wp_get_post_terms($post->ID, 'businessman-category');
 						?>
@@ -140,6 +140,7 @@
 				<div class="form-contact">
 					<h3><?php pll_e('Request for showing') ?></h3>
 					<form class="form" method="post" action="<?php echo admin_url('admin-ajax.php');?>">
+						<input type="hidden" name="action" value="reb_contact" />
 						<div class="one-third">
 							<input type="text" name="full-name" placeholder="Full name">
 						</div>
@@ -175,24 +176,25 @@
 				</div><!-- .form-contact -->
 			</div><!-- .property-details -->
 
-			<div class="related-properties">
+			<div class="related-properties mrg-btm">
 				<h3>Related properties</h3>
 				<?php 
 					$custom_taxterms = wp_get_object_terms( $post->ID, 'property-category', array('fields' => 'ids') );
 					
 					$args = array(
-						'post_type' => 'property',
-						'post_status' => 'publish',
-						'posts_per_page' => 6,
-						'orderby' => 'rand',
-						'tax_query' => array(
+						'post_type' 		=> 'property',
+						'post_status'		=> 'publish',
+						'posts_per_page'	=> 1,
+						'paged'				=> ( get_query_var('page') ) ? get_query_var('page') : 1,
+						'orderby'			=> 'rand',
+						'tax_query' 		=> array(
 							array(
-								'taxonomy' => 'property-category',
-								'field' => 'id',
-								'terms' => $custom_taxterms
+								'taxonomy' 		=> 'property-category',
+								'field' 		=> 'id',
+								'terms' 		=> $custom_taxterms
 							)
 						),
-						'post__not_in' => array ($post->ID),
+						'post__not_in' 		=> array ($post->ID),
 					);
 					$related_items = new WP_Query( $args );
 					
@@ -226,9 +228,14 @@
 				<?php
 						endwhile;
 					endif;
-					
+				?>
+				<div class="g-pagination">
+				<?php
+					$REBooking->pagination();
+
 					wp_reset_postdata();
 				?>
+				</div>
 			</div><!-- .related-properties -->
 		</div>
 

@@ -40,7 +40,13 @@
 					</div>
 					<?php endwhile; ?>
 				</div><!-- .search-results -->
+				<div class="pagination">
+				<?php
+					$REBooking->pagination();
 
+					wp_reset_postdata();
+				?>
+				</div>
 			</div>
 
 			<div class="one-third">

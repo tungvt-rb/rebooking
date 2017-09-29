@@ -15,7 +15,7 @@ if($pages == '') {
 if($pages != 1) {
 	for ($i=1; $i <= $pages; $i++) {
 		if (1 !== $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
-			echo ($paged == $i)? "<a href='".get_pagenum_link($i)."' class=\"g_pagination_item active\">".$i."</a>":"<a href='".get_pagenum_link($i)."' class=\"g_pagination_item\">".$i."</a>";
+			echo ($paged == $i) ? "<span class=\"page-number current-page\">".$i."</span>" : "<a href='".get_pagenum_link($i)."' class=\"page-number\">".$i."</a>";
 		}
 	}
 }

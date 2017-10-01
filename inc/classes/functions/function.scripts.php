@@ -9,7 +9,7 @@ $jsObject = array(
 	'is_singular'	=> is_singular('property'),
 );
 
-wp_localize_script('jquery', 'vr', $jsObject);
+wp_localize_script('jquery', 'reb', $jsObject);
 
 wp_enqueue_script('bxslider', $this->templateURL . '/assets/js/jquery.bxslider.min.js', array('jquery'), false, true);
 wp_enqueue_script('simpleWeather', $this->templateURL . '/assets/js/jquery.simpleWeather.min.js', array('jquery'), false, true);

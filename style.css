@@ -119,6 +119,8 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;}
 .property-map {border:1px solid #c0c0c0;height:300px;padding:5px;background:#fff;}
 .property-map #map {height:100%;}
+.secureimage, .reload-secureimage {float:left;line-height:34px;}
+.reload-secureimage {font-size:20px;padding:0 5px;margin-left:5px;}
 
 .contact-bl {padding:5px;border:1px solid #c0c0c0;background:#fff;}
 .contact-bl-person {}

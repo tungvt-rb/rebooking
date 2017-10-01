@@ -6,8 +6,30 @@
 			$('.nav-mobile').slideToggle(300);
 			return true;
 		});
+
+		$('.reload-secureimage').live('click', function(){
+			var d = new Date();
+			var $t = $(this);
+			var $loader = $('<span>Please wait...</span>');
+			
+			// $('.secureimage').attr('src', reb.ajaxurl + '?action=reb_secure_image&_=' + d.getTime());
+
+			$.ajax({
+				// type: 'POST',
+				// url: reb.ajaxurl + '?action=reb_secure_image&_=' + d.getTime(),
+				beforeSend: function() {
+					$('.fa-refresh').replaceWith($loader);
+				},
+				success: function(data) {
+					$('.secureimage').attr('src', reb.ajaxurl + '?action=reb_secure_image&_=' + d.getTime());
+					$loader.replaceWith('<i class="fa fa-refresh"></i>');
+				},
+				dataType: 'html'
+			});
+			// return false;
+		});
 		
-		$('#newsletter').submit(function(e){
+		$('.form').submit(function(e){
 			e.preventDefault();
 			var $t = $(this);
 			var $submit = $(':submit', $t);

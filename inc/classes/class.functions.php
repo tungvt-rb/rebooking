@@ -42,10 +42,11 @@ class REBooking
 		add_filter('the_excerpt_rss', array(&$this, 'the_excerpt_rss'));
 		add_filter('query_vars', array(&$this, 'register_query_vars'));
 
-		//Submit Form
+		//AJAX
 		add_action('wp_ajax_reb_request_showing', array(&$this, 'submit_request_showing'));
 		add_action('wp_ajax_nopriv_reb_request_showing', array(&$this, 'submit_request_showing'));
-
+		add_action('wp_ajax_reb_secure_image', array(&$this, 'secure_image'));
+		add_action('wp_ajax_nopriv_reb_secure_image', array(&$this, 'secure_image'));
 	}
 
 	function image_size_names_choose($sizes) {
@@ -84,6 +85,14 @@ class REBooking
 		$vars[] = 'location';
 
 		return $vars;
+	}
+
+	function secure_image() {
+		require_once ( TEMPLATEPATH . '/inc/classes/functions/function.secureimage.php' );
+	}
+
+	function submit_request_showing() {
+		require_once ( TEMPLATEPATH . '/inc/classes/function/forms/function.request_showing.php' );
 	}
 
 	function the_excerpt_rss($content, $totalWords=30)

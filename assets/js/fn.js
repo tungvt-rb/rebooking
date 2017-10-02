@@ -10,13 +10,9 @@
 		$('.reload-secureimage').live('click', function(){
 			var d = new Date();
 			var $t = $(this);
-			var $loader = $('<span>Please wait...</span>');
-			
-			// $('.secureimage').attr('src', reb.ajaxurl + '?action=reb_secure_image&_=' + d.getTime());
+			var $loader = $('<img class="img-loader" src="' + reb.baseurl + '/wp-content/themes/rebooking/assets/images/loader-20x20.gif" />');
 
 			$.ajax({
-				// type: 'POST',
-				// url: reb.ajaxurl + '?action=reb_secure_image&_=' + d.getTime(),
 				beforeSend: function() {
 					$('.fa-refresh').replaceWith($loader);
 				},
@@ -26,7 +22,6 @@
 				},
 				dataType: 'html'
 			});
-			// return false;
 		});
 		
 		$('.form').submit(function(e){
@@ -34,7 +29,9 @@
 			var $t = $(this);
 			var $submit = $(':submit', $t);
 			var $loader = $('<span>Please wait...</span>');
-			$('.errmsg', $t).remove();
+			var $html = '';
+			$(':input', $t).removeClass('errmsg');
+			$('.errmsg-content').remove();
 			$submit.replaceWith($loader);
 			$.post($t.attr('action'), $t.serializeArray(), function(rs){
 				if (rs.status=='SUCCESS') {
@@ -42,8 +39,10 @@
 				} else {
 					for (var i in rs.errors)
 					{
-						$(':input[name="'+i+'"]').after('<div class="errmsg">'+rs.errors[i]+'</div>');
+						$(':input[name="'+i+'"]').addClass('errmsg');
+						$html += rs.errors[i] + '<br>';
 					}
+					$('.form').after('<div class"errmsg-content">' + $html + '</div>');
 					$loader.replaceWith($submit);
 				}
 			}, 'json');

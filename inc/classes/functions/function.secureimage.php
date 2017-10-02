@@ -27,4 +27,4 @@
 	header('Content-Type: image/jpeg');
 	imagejpeg($image);
 	imagedestroy($image);
-	$_SESSION['secure_code'] = $code;
+	$_SESSION['secure-code'] = $code;

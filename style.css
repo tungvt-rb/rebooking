@@ -47,6 +47,14 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .wrapper {max-width:1200px;margin:0 auto;}
 .content {background:#fafafa;border-left:1px solid #dedede;border-right:1px solid #dedede;}
 .p-title {text-align:center;line-height:30px;margin-bottom:15px;padding:15px 0 0;font-weight:500;color:#de5744;}
+.img-loader {padding:5px 0;}
+.errmsg {border-color:#f00 !important;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
 
 .button {background-color:#0E5781;color:#fff;border:0;padding:0 15px;font-weight:bold;line-height:36px;text-transform:uppercase;width:50%;
     border-radius:30px;
@@ -142,6 +150,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 .form-contact {background:#fafafa;padding:5px;border:1px solid #c0c0c0;}
 .form-contact h3 {padding:0 5px;text-transform:uppercase;margin-bottom:6px;}
+.form-contact .btnSubmit {margin-bottom:0;line-height:22px;}
 
 .related-properties {padding:5px;background:#dce4d5;border:1px solid #c0c0c0;}
 

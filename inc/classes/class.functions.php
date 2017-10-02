@@ -47,6 +47,7 @@ class REBooking
 		add_action('wp_ajax_nopriv_reb_request_showing', array(&$this, 'submit_request_showing'));
 		add_action('wp_ajax_reb_secure_image', array(&$this, 'secure_image'));
 		add_action('wp_ajax_nopriv_reb_secure_image', array(&$this, 'secure_image'));
+
 	}
 
 	function image_size_names_choose($sizes) {
@@ -92,7 +93,7 @@ class REBooking
 	}
 
 	function submit_request_showing() {
-		require_once ( TEMPLATEPATH . '/inc/classes/function/forms/function.request_showing.php' );
+		require_once ( TEMPLATEPATH . '/inc/classes/functions/forms/function.request_showing.php' );
 	}
 
 	function the_excerpt_rss($content, $totalWords=30)

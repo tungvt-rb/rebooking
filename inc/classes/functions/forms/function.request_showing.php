@@ -1,18 +1,17 @@
 <?php
-	
 
 	$email = isset($_POST['email']) ? trim($_POST['email']) : '';
 	$phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-	$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+	$fullname = isset($_POST['full-name']) ? trim($_POST['full-name']) : '';
 	$securecode = isset($_POST['secure-code']) ? trim($_POST['secure-code']) : '';
 	$errors = array();
 	
-	// if (empty($phone)) $errors['phone'] = 'Bạn cần nhập số điện thoại.';
-	// if (empty($name)) $errors['name'] = 'Bạn cần nhập họ tên.';
-	// if (empty($email)) $errors['email'] = 'Bạn cần nhập địa chỉ email.';
-	// elseif (!is_email($email)) $errors['email'] = 'Địa chỉ email sai. Hãy nhập lại.';
+	if (empty($phone)) $errors['phone'] = 'Bạn cần nhập số điện thoại.';
+	if (empty($fullname)) $errors['full-name'] = 'Bạn cần nhập họ tên.';
+	if (empty($email)) $errors['email'] = 'Bạn cần nhập địa chỉ email.';
+	elseif (!is_email($email)) $errors['email'] = 'Địa chỉ email sai. Hãy nhập lại.';
 	if (empty($securecode)) $errors['secure-code'] = 'Secure code is required.';
-		else if (!isset($_SESSION['secure-code']) OR $_SESSION['secure-code']!=$securecode) $errors['secure-code'] = 'Secure code is incorrect.';
+	else if (!isset($_SESSION['secure-code']) OR $_SESSION['secure-code']!=$securecode) $errors['secure-code'] = 'Secure code is incorrect.';
 
 	if (sizeof($errors)) {
 		echo json_encode(array(
@@ -64,4 +63,5 @@
 		}
 
 	}
+
 	exit();

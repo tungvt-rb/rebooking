@@ -23,11 +23,11 @@
 	<div class="clear"></div>
 
 	<div class="one-third">
-		<input type="text" name="secure-code" placeholder="Secure code">
+		<input type="text" name="secure-code" maxlength="5" placeholder="Secure code">
 	</div>
 	<div class="one-third">
 		<img class="secureimage" src="<?php echo admin_url('admin-ajax.php?action=reb_secure_image');?>" alt="secure image" />
-		<a href="#" class="reload-secureimage"><i class="fa fa-refresh"></i></a>
+		<a href="javascript:;" class="reload-secureimage"><i class="fa fa-refresh"></i></a>
 	</div>
 	<div class="one-third">
 		<input type="submit" name="submit" value="Send" class="btnSubmit">

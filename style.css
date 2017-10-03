@@ -219,6 +219,17 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .property-list .tooltip:hover .tooltiptext {bottom:190px;left:-100px;}
 .re-block .tooltip:hover .tooltiptext {left:-16px;}
 
+/* NOTIFICATION */
+.notification {position:relative;margin:5px;padding:5px 8px;border:1px solid;font-size:13px;}
+.notification .close {color:#990000;position:absolute;right:5px;top:3px;line-height:normal;}
+.attention {background:#fffbcc;border-color:#e6db55;color:#666452;}
+.infomation {background:#dbe3ff; border-color: #a2b4ee;color:#585b66;}
+.success {background:#d5ffce;border-color:#9adf8f;color:#556652;}
+.error {background:#ffcece;border-color:#df8f8f;color:#665252;}
+.error ul {}
+.error ul li {width:49%;display:inline-block;}
+.error ul li i {color:#dc3d27;margin-right:3px;}
+
 /* BREADCRUMBS */
 .breadcrumbs {display:flex;flex-direction:row-reverse;overflow:hidden;float:left;margin:5px 0;}
 .breadcrumbs li {display:inline-block;position:relative;margin-left:-15px;}

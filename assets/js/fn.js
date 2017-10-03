@@ -7,6 +7,13 @@
 			return true;
 		});
 
+		$('.close').live('click', function() {
+			$(this).parent().fadeTo(400, 0, function() {
+				$(this).slideUp(400);
+			});
+			return false;
+		});
+
 		$('.reload-secureimage').live('click', function(){
 			var d = new Date();
 			var $t = $(this);
@@ -31,7 +38,7 @@
 			var $loader = $('<span>Please wait...</span>');
 			var $html = '';
 			$(':input', $t).removeClass('errmsg');
-			$('.errmsg-content').remove();
+			$('.notification').remove();
 			$submit.replaceWith($loader);
 			$.post($t.attr('action'), $t.serializeArray(), function(rs){
 				if (rs.status=='SUCCESS') {
@@ -40,18 +47,12 @@
 					for (var i in rs.errors)
 					{
 						$(':input[name="'+i+'"]').addClass('errmsg');
-						$html += rs.errors[i] + '<br>';
+						$html += '<li><i class="fa fa-warning"></i>' + rs.errors[i] + '</li>';
 					}
-					$('.form').after('<div class"errmsg-content">' + $html + '</div>');
+					$('.form').after('<div class="notification error"><a href="javascript:;" class="close"><i class="fa fa-close"></i></a><ul>' + $html + '</ul></div>');
 					$loader.replaceWith($submit);
 				}
 			}, 'json');
-		});
-
-		$('.bxslider').bxSlider({
-			mode: 'fade',
-			captions: true,
-			auto: true,
 		});
 
 		$(window).scroll(function () {

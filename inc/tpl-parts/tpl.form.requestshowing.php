@@ -5,10 +5,10 @@
 		<input type="text" name="full-name" placeholder="Full name">
 	</div>
 	<div class="one-third">
-		<input type="text" name="email" placeholder="Your email">
+		<input type="text" id="email" name="email" placeholder="Your email">
 	</div>
 	<div class="one-third">
-		<input type="text" name="phone" placeholder="Your phone">
+		<input type="text" id="phone" name="phone" placeholder="Your phone">
 	</div>
 	<div class="clear"></div>
 

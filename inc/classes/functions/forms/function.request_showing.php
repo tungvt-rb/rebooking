@@ -47,12 +47,17 @@
 		// 	'post_type' => 'newsletter',
 		// 	'post_excerpt' => $content,
 		// ));
+		$postID = 1;
 
 		if ($postID) {
+			$html = '<div class="notification success">
+						<a href="javascript:;" class="close"><i class="fa fa-close"></i></a>
+						<span><i class="fa fa-info-circle"></i> Lorem isum dolor set amit</span>
+					</div>';
 
 			echo json_encode(array(
 				'status' => 'SUCCESS',
-				// 'body' => '<div class="success">' . vrOptionTree('thankyou_message', '', 0) . '</div>',
+				'body' => $html,
 			));
 
 		} else {

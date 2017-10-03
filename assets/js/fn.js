@@ -38,7 +38,7 @@
 			var $loader = $('<span>Please wait...</span>');
 			var $html = '';
 			$(':input', $t).removeClass('errmsg');
-			$('.notification').remove();
+			$('.notification.error').remove();
 			$submit.replaceWith($loader);
 			$.post($t.attr('action'), $t.serializeArray(), function(rs){
 				if (rs.status=='SUCCESS') {
@@ -47,7 +47,7 @@
 					for (var i in rs.errors)
 					{
 						$(':input[name="'+i+'"]').addClass('errmsg');
-						$html += '<li><i class="fa fa-warning"></i>' + rs.errors[i] + '</li>';
+						$html += '<li><i class="fa fa-exclamation-triangle"></i>' + rs.errors[i] + '</li>';
 					}
 					$('.form').after('<div class="notification error"><a href="javascript:;" class="close"><i class="fa fa-close"></i></a><ul>' + $html + '</ul></div>');
 					$loader.replaceWith($submit);

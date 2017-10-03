@@ -20,21 +20,9 @@
 		));
 	} else {
 		// send mail
-		$subject 		= 'Gửi từ [' . get_bloginfo('name') . ']';
-		$content 		= "Name: $name" . "\n";
-		$content 		.= "Phone: $phone" . "\n";
-		$content 		.= "Email: $email" . "\n";
-		$content 		.= "Dự án quan tâm: $subject" . "\n";
-		$content 		.= "Message:" . "\n"
-							. '----------------------------------------' . "\n"
-							. stripslashes($message) . "\n"
-							. '----------------------------------------' . "\n"
-							. "\n";
-		$content 		.= "Tin nhắn này được gửi từ trang " . get_bloginfo('home');
-		$to 			= 'tungvt1611@gmail.com';
-		$headers 		= 'From: webmaster@example.com' . "\r\n" .
-							'Reply-To: webmaster@example.com' . "\r\n" .
-							'X-Mailer: PHP/' . phpversion();
+		
+		// add content
+
 		//mail($to, $subject, $content, $headers);
 
 		// insert post
@@ -50,20 +38,20 @@
 		$postID = 1;
 
 		if ($postID) {
-			$html = '<div class="notification success">
-						<a href="javascript:;" class="close"><i class="fa fa-close"></i></a>
-						<span><i class="fa fa-info-circle"></i> Lorem isum dolor set amit</span>
-					</div>';
+			$html 	= '<div class="notification success">';
+			$html  .= '<a href="javascript:;" class="close"><i class="fa fa-close"></i></a>';
+			$html  .= '<span><i class="fa fa-info-circle"></i> Lorem isum dolor set amit</span>';
+			$html  .= '</div>';
 
 			echo json_encode(array(
-				'status' => 'SUCCESS',
-				'body' => $html,
+				'status' 	=> 'SUCCESS',
+				'body' 		=> $html,
 			));
 
 		} else {
 			echo json_encode(array(
-				'status' => 'FAILED',
-				'errors' => 'Error occured while submitting your story. Please try again later.',
+				'status' 	=> 'FAILED',
+				'errors' 	=> 'Error occured while submitting your comment. Please try again later.',
 			));
 		}
 

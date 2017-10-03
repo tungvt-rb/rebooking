@@ -118,7 +118,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .widget .person-details {margin-bottom:6px;}
 
 .property-details {background:#dce4d5;padding:10px;margin-bottom:10px;border:1px solid #c0c0c0;}
-.property-details h3, .related-properties h3 {font-size:26px;font-weight:500;text-align:left;line-height:45px;}
+.property-details h3, .related-properties h3 {font-size:26px;font-weight:500;text-align:left;line-height:45px;color:#b32f1d;}
 .details-header {position:relative;margin-bottom:5px;}
 .details-header .property-id, .details-header .property-price {position:relative;right:10px;font-size:14px;font-weight:500;line-height:20px;display:block;}
 .details-header .property-id {top:0;float:left;left:0;}
@@ -127,7 +127,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .property-content {padding:10px 15px;background:#fff;border:1px solid #c0c0c0;}
 .property-map {border:1px solid #c0c0c0;height:300px;padding:5px;background:#fff;}
 .property-map #map {height:100%;}
-.secureimage, .reload-secureimage {float:left;line-height:34px;}
+.secureimage, .reload-secureimage {float:left;line-height:34px;margin-bottom:10px;}
 .reload-secureimage {font-size:20px;padding:0 5px;margin-left:5px;}
 
 .contact-bl {padding:5px;border:1px solid #c0c0c0;background:#fff;}
@@ -227,13 +227,13 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .success {background:#f1f9f7;border-color:#e0f1e9;color:#1d9d74;}
 .error {background:#ffe4eb;border-color:#f19797;color:#c7254e;}
 .error ul {}
-.error ul li {width:49%;display:inline-block;}
+.error ul li {width:100%;display:block;}
 .error ul li i {color:#c7254e;margin-right:3px;}
 .error .close {color:#c7254e;}
 .success .close {color:#1d9d74;}
 
 /* BREADCRUMBS */
-.breadcrumbs {display:flex;flex-direction:row-reverse;overflow:hidden;float:left;margin:5px 0;}
+.breadcrumbs {display:none;flex-direction:row-reverse;overflow:hidden;float:left;margin:5px 0;}
 .breadcrumbs li {display:inline-block;position:relative;margin-left:-15px;}
 .breadcrumbs li a {display:block;padding:5px 20px 5px 30px;background:#b32f1d;color:#fff;text-transform:uppercase;border-radius:0 100px 100px 0;position:relative;box-shadow:0 0 20px rgba(0,0,0,0.4);}
 .breadcrumbs li a:hover {}
@@ -390,6 +390,8 @@ a.toggle:hover {background:#bae4b0;color:#000;}
     .weather-container {margin:0;}
     .top-nav-container ul {text-align:right;}
 
+    .breadcrumbs {display:flex;}
+
     .item-info .tbl {border-left:none;}
 
     .tbl td {width:50%;float:none;}
@@ -400,6 +402,8 @@ a.toggle:hover {background:#bae4b0;color:#000;}
     .details-header .property-price {bottom:3px;float:none;right:10px;}
     .tbl-details .tbl td {width:33.333333%;float:none;border-right:1px solid #fff;}
     .tbl-details .tbl tr:last-child td {border-bottom:none;}
+
+    .error ul li {width:49%;display:inline-block;}
 }
 
 @media screen and (min-width:768px) {

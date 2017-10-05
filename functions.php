@@ -1,5 +1,6 @@
 <?php if (!session_id())  session_start();
 
+require_once ( TEMPLATEPATH . '/inc/classes/class.tgm-plugin-activation.php' );
 require_once ( TEMPLATEPATH . '/inc/classes/class.admin.functions.php' );
 require_once ( TEMPLATEPATH . '/inc/classes/class.functions.php' );
 

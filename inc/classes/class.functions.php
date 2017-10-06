@@ -13,8 +13,7 @@ class REBooking
         )
 	);
 
-	function __construct()
-	{
+	function __construct() {
 		$this->templateURL = get_bloginfo('template_url');
 		$this->themeMods = get_theme_mods();
 		
@@ -83,6 +82,17 @@ class REBooking
 				'external_url'			=> '', // If set, overrides default API URL and points to an external URL.
 				'is_callable'			=> '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 			),
+			array(
+				'name'					=> 'Category and Taxonomy Image', // The plugin name.
+				'slug'					=> 'wp-custom-taxonomy-image', // The plugin slug (typically the folder name).
+				'source'				=> 'https://downloads.wordpress.org/plugin/wp-custom-taxonomy-image.zip', // The plugin source.
+				'required'				=> true, // If false, the plugin is only 'recommended' instead of required.
+				'version'				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+				'force_activation'		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+				'force_deactivation'	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+				'external_url'			=> '', // If set, overrides default API URL and points to an external URL.
+				'is_callable'			=> '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+			),
 		);
 
 		$config = array(
@@ -125,15 +135,13 @@ class REBooking
 		require_once ( TEMPLATEPATH . '/inc/classes/functions/forms/function.request_showing.php' );
 	}
 
-	function the_excerpt_rss($content, $totalWords=30)
-	{
+	function the_excerpt_rss($content, $totalWords=30) {
 		$aWords = explode(' ', $content);
 		$aWordsNew = array_slice($aWords, 0, $totalWords);
 		return implode(' ', $aWordsNew) . '...';
 	}
 
-	function getSlider($postID)
-	{
+	function getSlider($postID) {
 		$slider = get_post_meta($postID, 'slider', true);
 		if (!empty($slider))
 			$slides = unserialize($slider);
@@ -142,14 +150,5 @@ class REBooking
 			$slides = array();
 
 		require_once(TEMPLATEPATH . '/inc/slider.php');
-	}
-
-	function get_posts_grid()
-	{
-		$foo = new WP_Query(array(
-			'order' => 'DESC',
-		));
-		require_once(TEMPLATEPATH . '/inc/posts_grid.php');
-		wp_reset_query();
 	}
 }

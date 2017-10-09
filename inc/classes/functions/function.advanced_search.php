@@ -12,8 +12,8 @@ if (isset($_REQUEST['search']) && $_REQUEST['search'] == 'advanced' && !is_admin
 
 	$meta_query = array();
 
-	$query->set( 'paged', ( get_query_var('paged') ) ? get_query_var('paged') : 1 );
-	$query->set( 'posts_per_page', 2 );
+	// $query->set( 'paged', ( get_query_var('paged') ) ? get_query_var('paged') : 1 );
+	// $query->set( 'posts_per_page', 2 );
 	$query->set( 'post_type', array( 'property' ) );
 
 	if (!empty( get_query_var('min_price') ) && !empty(get_query_var('max_price'))) {

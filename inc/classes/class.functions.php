@@ -41,6 +41,7 @@ class REBooking
 		// Filters
 		add_filter('the_excerpt_rss', array(&$this, 'the_excerpt_rss'));
 		add_filter('query_vars', array(&$this, 'register_query_vars'));
+		add_filter('pre_get_posts', array(&$this, 'set_pre_get_posts'));
 
 		//AJAX
 		add_action('wp_ajax_reb_request_showing', array(&$this, 'submit_request_showing'));
@@ -107,6 +108,13 @@ class REBooking
 		);
 
 		tgmpa( $plugins, $config );
+	}
+
+	function set_pre_get_posts($query) {
+		if ( !is_admin() && ( is_tax() || is_archive() || is_search() ) ) {
+			$query->set( 'paged', ( get_query_var('paged') ) ? get_query_var('paged') : 1 );
+		}
+		return $query;
 	}
 
 	function pagination($pages = '', $range = 4) {

@@ -55,6 +55,8 @@ function kmf_breadcrumbs() {
 			} else {
 				if ( $show_current ) echo $sep . $before . sprintf($text['category'], single_cat_title('', false)) . $after;
 			}
+		} elseif ( is_tax() ) {
+			if ( $show_current ) echo $sep . $before . sprintf($text['category'], single_cat_title('', false)) . $after;
 		} elseif ( is_search() ) {
 			if ( have_posts() ) {
 				if ( $show_home_link && $show_current ) echo $sep;

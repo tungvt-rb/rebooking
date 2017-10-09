@@ -29,29 +29,29 @@ class Show_Immediate_Contact_Widget extends WP_widget {
 			if($posts) {
 				foreach ($posts as $post => $value) {
 					if($instance["businessman-$value->ID"] == $value->ID) {
-							$args = array(
-								'post_type' => 'businessman',
-								'p'		=> $instance["businessman-$value->ID"],
-							);
+						$args = array(
+							'post_type' => 'businessman',
+							'p'		=> $instance["businessman-$value->ID"],
+						);
 
-							$query = new WP_Query($args);
+						$query = new WP_Query($args);
 
-							if( $query->have_posts() ) {
-								while( $query->have_posts() ) : $query->the_post();
-									$featured_image 		= aq_resize( wp_get_attachment_url( get_post_thumbnail_id($value->ID) ,'full') , 100, 100, true );
-									$bm_mobile				= get_post_meta(get_the_ID(), 'businessman_mobile', true);
-									$bm_email				= get_post_meta(get_the_ID(), 'businessman_email', true);
-									$bm_notes				= get_post_meta(get_the_ID(), 'businessman_notes', true);
+						if( $query->have_posts() ) {
+							while( $query->have_posts() ) : $query->the_post();
+								$featured_image 		= aq_resize( wp_get_attachment_url( get_post_thumbnail_id($value->ID) ,'full') , 100, 100, true );
+								$bm_mobile				= get_post_meta(get_the_ID(), 'businessman_mobile', true);
+								$bm_email				= get_post_meta(get_the_ID(), 'businessman_email', true);
+								$bm_notes				= get_post_meta(get_the_ID(), 'businessman_notes', true);
 
-									$terms = wp_get_post_terms($value->ID, 'businessman-category');
+								$terms = wp_get_post_terms($value->ID, 'businessman-category');
 
-									require ( TEMPLATEPATH . '/inc/tpl-parts/widgets/tpl.widget.show_businessman.php' );
+								require ( TEMPLATEPATH . '/inc/tpl-parts/widgets/tpl.widget.show_businessman.php' );
 
-								endwhile;
-							} else {
-								pll_e('No post found!');
-							}
-							wp_reset_query();
+							endwhile;
+						} else {
+							pll_e('No post found!');
+						}
+						wp_reset_query();
 					}
 				}
 			}

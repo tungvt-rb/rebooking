@@ -113,6 +113,7 @@ class REBooking
 	function set_pre_get_posts($query) {
 		if ( !is_admin() && ( is_tax() || is_archive() || is_search() ) ) {
 			$query->set( 'paged', ( get_query_var('paged') ) ? get_query_var('paged') : 1 );
+			$query->set( 'posts_per_page', '2' );
 		}
 		return $query;
 	}

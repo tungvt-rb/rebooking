@@ -154,6 +154,18 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 
 .related-properties {padding:5px;background:#dce4d5;border:1px solid #c0c0c0;}
 
+.bl-property-categories {margin-bottom:10px;}
+.bl-property-categories img {float:left;max-width:35%;margin-right:8px;}
+.bl-property-categories .pc-details {}
+.bl-property-categories .pc-details span {display:block;}
+.bl-property-categories .pc-details .pc-name {text-transform:uppercase;font-weight:500;font-size:15px;line-height:26px;}
+.bl-property-categories .pc-details .pc-desc {font-size:14px;line-height:20px;}
+
+/* Taxonomy Property Categories */
+.tpc {padding:10px 4px;background:#dce4d5;border:1px solid #c0c0c0;}
+.tpc-header h1 {margin:10px 0;color:#b32f1d;text-align:center;}
+.tpc-header p {text-align:justify;padding-right:10px;}
+.tpc-header img {border:1px solid #2c83a3;margin-right:10px;}
 
 /* LANDING PAGE */
 .re-block {background:#dce4d5;color:#fff;border:1px solid #c0c0c0;margin-bottom:10px;}

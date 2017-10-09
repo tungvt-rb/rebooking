@@ -29,3 +29,4 @@ register_sidebar(array(
 
 //register widgets
 require_once ( TEMPLATEPATH . '/inc/classes/functions/widgets/widget.show_businessman.php' );
+require_once ( TEMPLATEPATH . '/inc/classes/functions/widgets/widget.show_property_categories.php' );

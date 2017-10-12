@@ -38,8 +38,14 @@
 					<?php require ( TEMPLATEPATH . '/inc/tpl-parts/tables/tpl.search.result.php' ); ?>
 				</div><!-- .item-info -->
 				<div class="clear"></div>
-			</div>
+			</div><!-- .property-item -->
 			<?php endwhile; ?>
+
+			<div class="pagination">
+			<?php
+				$REBooking->pagination();
+			?>
+			</div><!-- .pagination -->
 		</div>
 		<div class="one-third">
 			<div class="widget-block">

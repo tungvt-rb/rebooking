@@ -21,7 +21,8 @@ class Show_Immediate_Contact_Widget extends WP_widget {
 			}
 
 			$args = array(
-				'post_type' => 'businessman',
+				'post_type'		=> 'businessman',
+				'nopaging'		=> true,
 			);
 			global $posts;
 			$posts = get_posts($args);
@@ -30,8 +31,9 @@ class Show_Immediate_Contact_Widget extends WP_widget {
 				foreach ($posts as $post => $value) {
 					if($instance["businessman-$value->ID"] == $value->ID) {
 						$args = array(
-							'post_type' => 'businessman',
-							'p'		=> $instance["businessman-$value->ID"],
+							'post_type'			=> 'businessman',
+							'p'					=> $instance["businessman-$value->ID"],
+							'nopaging'			=> true,
 						);
 
 						$query = new WP_Query($args);

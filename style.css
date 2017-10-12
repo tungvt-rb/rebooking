@@ -81,6 +81,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .g-hr .g-hr-h i {position:absolute;top:0;left:50%;font-size:22px;height:24px;width:50px;margin-top:-12px;margin-left:-25px;
     text-align:center;background-color:#fff;color:#eaaa1c;
 }
+h3.title {color:#b32f1d;font-weight:500;font-size:20px;text-transform:uppercase;margin-bottom:15px;padding:6px 0;}
 
 /* HEADER */
 .top-head {background:#922c1e;border-bottom:1px solid #b16155;}
@@ -114,7 +115,7 @@ a:link, a:visited, a:active, a:hover {color:#333;cursor:pointer;
 .head-info img {width:100%;}
 
 .widget {background:#fff;padding:10px 8px;border:1px solid #c0c0c0;}
-.widget h3.title {text-align:center;color:#b32f1d;font-weight:500;font-size:20px;text-transform:uppercase;margin-bottom:15px;padding:6px 0;}
+.widget h3.title {text-align:center;}
 .widget .person-details {margin-bottom:6px;}
 
 .property-details {background:#dce4d5;padding:10px;margin-bottom:10px;border:1px solid #c0c0c0;}
@@ -369,7 +370,8 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 
 /* ======================= Footer ======================= */
 .footer {}
-.foot-content {background:#922c1e;color:#fff;text-align:center;padding:15px 0;}
+.foot-content {padding:15px 10px;background:#dce4d5;border-left:1px solid #dedede;border-right:1px solid #dedede;}
+.copyright {background:#922c1e;color:#fff;text-align:center;padding:15px 0;}
 
 /* ======================= Grid ======================= */
 .g-row:before, .g-row:after {display:table;line-height:0;content:"";}

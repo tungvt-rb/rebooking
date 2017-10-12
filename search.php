@@ -53,6 +53,7 @@
 			<div class="one-third">
 				<?php dynamic_sidebar( 'default-sidebar' ); ?>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div><!-- .wrapper -->
 

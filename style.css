@@ -374,6 +374,7 @@ a.toggle:hover {background:#bae4b0;color:#000;}
 .copyright {background:#922c1e;color:#fff;text-align:center;padding:15px 0;}
 
 /* ======================= Grid ======================= */
+.g-row {overflow:hidden;}
 .g-row:before, .g-row:after {display:table;line-height:0;content:"";}
 .g-row:after {clear:both;}
 .full-width {width:100%;float:left;padding:0 5px;position:relative;}

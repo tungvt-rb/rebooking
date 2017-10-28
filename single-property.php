@@ -141,16 +141,7 @@
 					<?php require_once ( TEMPLATEPATH . '/inc/tpl-parts/tpl.form.requestshowing.php' ); ?>
 				</div><!-- .form-contact -->
 			</div><!-- .property-details -->
-		</div>
 
-		<div class="one-third">
-			<div class="widget-block">
-				<?php dynamic_sidebar( 'default-sidebar' ); ?>
-			</div>
-		</div>
-		<div class="clear"></div>
-
-		<div class="full-width">
 			<div class="related-properties mrg-btm">
 				<h3>Related properties</h3>
 				<?php 
@@ -159,7 +150,7 @@
 					$args = array(
 						'post_type' 		=> 'property',
 						'post_status'		=> 'publish',
-						'posts_per_page'	=> 1,
+						'posts_per_page'	=> 3,
 						'paged'				=> ( get_query_var('page') ) ? get_query_var('page') : 1,
 						'orderby'			=> 'rand',
 						'tax_query' 		=> array(
@@ -212,6 +203,17 @@
 				?>
 				</div>
 			</div><!-- .related-properties -->
+		</div>
+
+		<div class="one-third">
+			<div class="widget-block">
+				<?php dynamic_sidebar( 'default-sidebar' ); ?>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+		<div class="full-width">
+			
 		</div>
 		<div class="clear"></div>
 	</div>

@@ -45,7 +45,7 @@
 						$img_title_alt	= get_the_excerpt($value);
 						$img_url		= wp_get_attachment_image_src($value, 'full');
 				?>
-				<li><img src="<?php echo $img_url[0] ?>" title="<?php echo $img_title_alt ?>" alt="<?php echo $img_title_alt ?>"></li>
+				<li><img src="<?php echo $img_url[0] ?>"></li>
 				<?php endforeach; ?>
 			</ul>
 			<?php } ?>

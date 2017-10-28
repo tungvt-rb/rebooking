@@ -22,6 +22,7 @@ get_header();
 
 				if($posts) {
 					$_post_count=0;
+					$_class_tbl_move = '';
 					foreach($posts as $post) : setup_postdata($post);
 						$_post_count++;
 						$featured_image = aq_resize( wp_get_attachment_url( get_post_thumbnail_id() ,'full') , 280, 280, true );
@@ -34,8 +35,16 @@ get_header();
 						$re_furnished	= get_post_meta(get_the_ID(), 'property_furnished', true);
 						$re_equipped 	= get_post_meta(get_the_ID(), 'property_equipped', true);
 						$re_location	= get_post_meta(get_the_ID(), 'property_location', true);
+
+						if ( $_post_count===1 || $_post_count===7 ) {
+							$_class_tbl_move = ' tbl-move-right';
+						} elseif ( $_post_count%6===0 ) {
+							$_class_tbl_move = ' tbl-move-left';
+						} else {
+							$_class_tbl_move = '';
+						}
 			?>
-			<div class="one-sixth <?php echo ($_post_count==1 || $_post_count%6==0) ? 'tbl-move' : '' ?>">
+			<div class="one-sixth<?php echo $_class_tbl_move; ?>">
 				<?php if( has_post_thumbnail() ) { ?>
 				<div class="tooltip">
 					<a class="thumb tooltip" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

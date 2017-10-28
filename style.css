@@ -230,6 +230,8 @@ h3.title {color:#b32f1d;font-weight:500;font-size:20px;text-transform:uppercase;
 }
 .tooltip:hover .tooltiptext {visibility:visible;}
 .property-list .tooltip:hover .tooltiptext {bottom:190px;left:-100px;}
+.property-list .tbl-move .tooltip:hover .tooltiptext {left:0;}
+.property-list .tbl-move .tooltip .tooltiptext::after {left:25%;}
 .re-block .tooltip:hover .tooltiptext {left:-16px;}
 
 /* NOTIFICATION */

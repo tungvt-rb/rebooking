@@ -35,7 +35,7 @@ get_header();
 						$re_equipped 	= get_post_meta(get_the_ID(), 'property_equipped', true);
 						$re_location	= get_post_meta(get_the_ID(), 'property_location', true);
 			?>
-			<div class="one-sixth">
+			<div class="one-sixth <?php echo ($_post_count==1 || $_post_count%6==0) ? 'tbl-move' : '' ?>">
 				<?php if( has_post_thumbnail() ) { ?>
 				<div class="tooltip">
 					<a class="thumb tooltip" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

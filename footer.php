@@ -15,11 +15,11 @@
 				<div class="one-third">
 					<h3 class="title">Link Useful</h3>
 					<ul>
-						<li><a href="#">Living in Ha Noi</a></li>
-						<li><a href="#">Spa & Beauty</a></li>
-						<li><a href="#">Embassy</a></li>
-						<li><a href="#">Restaurants</a></li>
-						<li><a href="#">Stores and Markets</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Living in Ha Noi</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Spa & Beauty</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Embassy</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Restaurants</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Stores and Markets</a></li>
 					</ul>
 				</div>
 				<div class="one-third">
